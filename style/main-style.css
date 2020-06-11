@@ -4,10 +4,27 @@
 }
 
 body {
+	min-height: 100%;
 	background-color: #fff;
 	font-family: Helvetica, Arial, sans-serif, Apple Color Emoji,Segoe UI Emoji;
 	font-size: 14px;
 	line-height: 1.5;
+}
+
+/* --------------------------------------------------------------- */
+
+@media screen and (max-width: 760px) {	
+	.navbar_container {
+		display: none;
+	}
+	
+	.content_container {
+		width: 100% !important;
+	}
+	
+	.content {
+		margin-left: 0px !important;
+	}
 }
 
 /* --------------------------------------------------------------- */
@@ -37,7 +54,7 @@ body {
 }
 
 /* --------------------------------------------------------------- */
-/*
+
 .header_elem {
 	height: 50px;
 	float: right;
@@ -50,11 +67,12 @@ body {
 
 .header_elem ul li {
 	float: left;
-	padding-left: 15px;
+	padding-right: 25px;
 }
 
-.header_elem ul li:last-child {
-	padding-right: 20px;
+.header_elem ul li img {
+	vertical-align: middle;
+	border-radius: 3px;
 }
 
 .header_elem ul li a {
@@ -64,8 +82,8 @@ body {
 }
 
 .header_elem ul li a:hover {
-	color: #aaa;
-}*/
+	color: hsla(0, 0%, 100%, .7);
+}
 
 /* --------------------------------------------------------------- */
 
@@ -91,6 +109,15 @@ body {
 	list-style-type: none;
 }
 
+.navbar hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #dfe2e5;
+}
+
 .navbar a {
 	display: block;
 	position: relative;
@@ -99,7 +126,7 @@ body {
 	
 	margin-bottom: 5px;
 	overflow: hidden;
-	font-size: 14px;
+	font-size: 15px;
 	color: #586069;
 	text-decoration: none;
 	text-overflow: ellipsis;
@@ -120,6 +147,7 @@ body {
 }
 
 .content {
+	background-color: #458;
 	margin-left: 16px;
 	height: inherit;
 }
