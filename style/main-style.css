@@ -41,17 +41,17 @@ body {
 .header_items {
 	padding-left: 20px;
 	padding-right: 20px;
+	height: inherit;
 }
 
-.header_title a {
+.header_title {
+	padding-top: 9px;
 	float: left;
-	color: #fdfdfd;
-	font-size: 25pt;
-	text-decoration: none;
+	display: inline-block;
 }
 
-.header_title a:hover {
-	color: #aaa;
+.header_title:hover {
+	color: hsla(0, 0%, 100%, .7);
 }
 
 /* --------------------------------------------------------------- */
@@ -80,7 +80,7 @@ body {
 	list-style: none;
 }
 
-.details_header:hover {
+.details_header:hover .dropdown-caret {
 	color: hsla(0, 0%, 100%, .7);
 }
 
@@ -266,6 +266,12 @@ details:not([open]) > :not(summary) {
 .menu_item-ico {
 	display: inline-block;
 	margin-right: 6px;
+}
+
+.counter {
+	float: right;
+	color: #24292e;
+	display: none; /* WARNING: COUNTER DISPLAY IS NONE */
 }
 
 .content_container {
