@@ -273,7 +273,6 @@ details:not([open]) > :not(summary) {
 }
 
 .navbar {
-	height: 100%;
 	width: 100%;
 	padding-top: 16px;
 	padding-bottom: 40px;
@@ -283,6 +282,8 @@ details:not([open]) > :not(summary) {
 .navbar ul {
 	list-style-type: none;
 	padding-left: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 .navbar hr {
@@ -292,7 +293,6 @@ details:not([open]) > :not(summary) {
 	background: transparent;
 	border: 0;
 	border-bottom: 1px solid #dfe2e5;
-	box-sizing: initial;
 }
 
 hr::after {
@@ -351,13 +351,14 @@ hr::after, hr::before {
 .content {
 	padding-left: 16px;
 	padding-top: 16px;
+	min-width: 0;
 }
 
 .back {	
 	background-color: #28a745;
-	background-image: linear-gradient(-180deg,#34d058,#28a745 90%);
+	background-image: linear-gradient(-180deg, #34d058, #28a745 90%);
 	border: 1px solid #000;
-	height: 800px;
+	height: 600px;
 }
 
 
