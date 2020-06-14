@@ -74,9 +74,9 @@ body {
 /* --------------------------------------------------------------- */
 
 .header-title {
-	display: flex;
-	align-self: stretch;
-	vertical-align: middle;
+	text-decoration: none;
+	font-size: 26pt;
+	color: #fff;
 }
 
 .header-title:hover {
