@@ -117,11 +117,11 @@ details {
 .details-header {
 	cursor: pointer;
 	display: list-item;
-	list-style: none;
 }
 
 .details-header:hover .dropdown-caret {
-	color: hsla(0, 0%, 100%, .7);
+	color: hsla(0, 0%, 100%, .7); /* LINE IN THE CHROME */
+	
 }
 
 .details-header::before {
@@ -182,6 +182,15 @@ details {
 
 .details-reset > summary::before {
     display: none;
+}
+
+.details-reset > summary {
+	list-style: none;
+	outline: none;
+}
+
+details > summary::-webkit-details-marker {
+	display: none;
 }
 
 
