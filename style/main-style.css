@@ -15,6 +15,42 @@ body {
 
 /* --------------------------------------------------------------- */
 
+@media (max-width: 850px) {
+	.navbar-container {
+		display: none !important;
+	}
+	
+	.content-container {
+		width: 100% !important;
+	}
+	
+	.content {
+		padding-left: 0 !important;
+	}
+	
+	.header-container {
+		padding: 16px 40px !important;
+		height: 30px !important;
+	}
+	
+	.header-container .header-item:last-child {
+		display: none;
+	}
+}
+
+@media (max-width: 560px) {
+	.header-container {
+		padding: 16px !important;
+		height: 30px !important;
+	}
+	
+	.header-item:nth-last-child(2) {
+		margin-right: 0px !important;
+	}
+}
+
+/* --------------------------------------------------------------- */
+
 .height-full {
 	height: 100% !important;
 }
@@ -48,10 +84,6 @@ body {
 }
 
 /* --------------------------------------------------------------- */
-
-.header-elem {
-	height: 50px;
-}
 
 .header-item {
 	align-self: stretch;
@@ -324,6 +356,7 @@ hr::after, hr::before {
 .back {	
 	background-color: #28a745;
 	background-image: linear-gradient(-180deg,#34d058,#28a745 90%);
+	border: 1px solid #000;
 	height: 800px;
 }
 
