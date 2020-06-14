@@ -94,6 +94,10 @@ body {
 	margin-right: 0px;
 }
 
+.header-item a {
+	text-decoration: none;
+}
+
 .header-item > a:hover {
 	color: hsla(0, 0%, 100%, .7);
 }
@@ -120,7 +124,7 @@ details {
 }
 
 .details-header:hover .dropdown-caret {
-	color: hsla(0, 0%, 100%, .7); /* LINE IN THE CHROME */
+	color: hsla(0, 0%, 100%, .7);
 	
 }
 
