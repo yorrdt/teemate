@@ -19,8 +19,21 @@ body {
 
 /* --------------------------------------------------------------- */
 
+@media (max-width: 1170px) {
+	.aside-container {
+		display: none !important;
+	}
+	
+	.content-container {
+		width: 80% !important;
+	}
+	
+	.navbar-container {
+		width: 20% !important;
+	}
+}
 
-@media (max-width: 1000px) {
+@media (max-width: 950px) {
 	.navbar-container  .user-names, .menu-item > span {
 		display: none !important;
 	}
@@ -110,6 +123,13 @@ body {
 }
 
 /* --------------------------------------------------------------- */
+
+.burger {
+	width: 30px;
+	height: 30px;
+	background-color: #ccc;
+	cursor: pointer;
+}
 
 .header-title {
 	text-decoration: none;
@@ -453,28 +473,20 @@ hr::after, hr::before {
 /* --------------------------------------------------------------- */
 
 .content-container {
-	width: 84%;
+	width: 64%;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 16px;
 }
 
 .content {
-	padding-top: 16px;
-	padding-left: 16px;
-	padding-right: 16px;
-	min-width: 0;
-}
-
-.back {
-	background-color: #eee;
-	border: 1px solid #000;
 	height: 700px;
+	border: 1px solid #dfe2e5;
 }
 
 .textarea {
 	padding: 10px 10px;
 	margin-bottom: 20px;
-	
-	font-family: Consolas, Arial, Helvetica, sans-serif;  
-	font-size: 15pt;
 	
 	width: calc(100% - 22px);
 	resize: none;
@@ -488,6 +500,12 @@ hr::after, hr::before {
 }
 
 /* --------------------------------------------------------------- */
+
+.aside-container {
+	width: 20$;
+	padding-top: 16px;
+	padding-right: 16px;
+}
 
 
 
