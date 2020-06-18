@@ -1,1 +1,1 @@
-/* some */
+autosize(document.querySelectorAll('textarea'));
