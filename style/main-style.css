@@ -21,8 +21,33 @@ body {
 
 
 @media (max-width: 1000px) {
-	.navbar-container  .user-names, .menu-item > span{
+	.navbar-container  .user-names, .menu-item > span {
 		display: none !important;
+	}
+	
+	.navbar-container {
+		width: 53px !important;
+	}
+	
+	.user-avatar {
+		margin-right: 0px !important;
+	}
+	
+	.user-avatar {
+		width: 21px !important;
+		height: 21px !important;
+	}
+	
+	.navbar ul {
+		width: 37px !important;
+	}
+	
+	.menu-item-ico {
+		margin-right: 0px !important;
+	}
+	
+	.menu-item {
+		padding: 8px !important;
 	}
 	
 	.content-container {
@@ -41,6 +66,13 @@ body {
 	
 	.header-container .header-item:last-child {
 		display: none;
+	}
+}
+
+@media (max-width: 740px) {
+	.navbar-container {
+		display: none !important;
+		/* width: 100% !important; */
 	}
 }
 
@@ -167,7 +199,7 @@ details {
 	background-color: #34d058;
 	text-decoration: none;
 	outline: none;
-	border-left: 2px solid #28a745;
+	/* border-left: 2px solid #28a745; */
 }
 
 .user-avatar {
@@ -404,7 +436,7 @@ hr::after, hr::before {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	cursor: pointer;
-	border-radius: 3px;
+	border-radius: 6px;
 }
 
 .menu-item:hover {
@@ -433,6 +465,8 @@ hr::after, hr::before {
 
 .back {
 	background-color: #eee;
+	border: 1px solid #000;
+	height: 700px;
 }
 
 .textarea {
