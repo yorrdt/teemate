@@ -181,9 +181,9 @@ details {
 	display: list-item;
 }
 
-.details-header:hover .dropdown-caret {
+.details-header:hover > .dropdown-caret, .details-header:focus > .dropdown-caret {
 	color: hsla(0, 0%, 100%, .7);
-	
+	text-decoration: none;
 }
 
 .details-header::before {
@@ -216,7 +216,7 @@ details {
 
 .dropdown-item:hover {
 	color: #fff;
-	background-color: #34d058;
+	background-color: #34d058; /* #eaecef */
 	text-decoration: none;
 	outline: none;
 	/* border-left: 2px solid #28a745; */
@@ -239,7 +239,7 @@ details {
     z-index: 80;
     display: block;
     cursor: default;
-    content: " ";
+    content: "";
     background: transparent;
 }
 
