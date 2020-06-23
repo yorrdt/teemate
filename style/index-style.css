@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #2b3137;
+	font-family: Helvetica, Arial, sans-serif, Apple Color Emoji,Segoe UI Emoji;
+	font-size: 14px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+/* --------------------------------------------------------------- */
+
+.height-full {
+	height: 100% !important;
+}
+
+/* --------------------------------------------------------------- */
+
+.header-container {
+	display: block;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	
+	background-color: #24292e;
+}
+
+.header {
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	
+	display: flex;
+	align-items: center;
+	max-width: 1280px;
+}
+
+/* --------------------------------------------------------------- */
+
+.header-item:first-child {
+	display: none;
+}
+
+.hamburger-wrapper-ref:hover .ham1, .hamburger-wrapper-ref:hover .ham2, .hamburger-wrapper-ref:hover .ham3 {
+	background-color: hsla(0, 0%, 100%, .7);
+}
+
+.hamburger {
+	padding-top: 3px;
+	width: 24px;
+	height: 21px;
+	cursor: pointer;
+}
+
+.ham1, .ham2, .ham3 {
+	width: inherit;
+	height: 3px;
+	background-color: #fff;
+	/* transition: 0.2s; */
+	border-radius: 6px;
+}
+
+.ham2 {
+	margin: 6px 0px;
+}
+
+/* --------------------------------------------------------------- */
+
+.header-title {
+	font-size: 26pt;
+}
+
+/* --------------------------------------------------------------- */
+
+.header-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-right: 16px;
+}
+
+.header-item:last-child {
+	margin-right: 0px;
+}
+
+.header-item a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.header-item > a:hover {
+	color: hsla(0, 0%, 100%, .7);
+}
+
+.center-item {
+	order: inherit;
+	flex: auto;
+	flex-direction: row;
+}
+
+.relative {
+	position: relative;
+}
+
+.signin-item, .signup-item {
+	font-size: 13pt;
+}
+
+.signup-item {
+	border: 1px solid #e1e4e8;
+	border-radius: 3px;
+	padding: 4px 8px;
+}
+
+.signup-item:hover {
+	border-color: #d1d5da;
+}
+
+/* --------------------------------------------------------------- */
+
+.main-wrapper {
+	display: flex;
+	flex: auto;
+	flex-direction: column;
+}
+
+.main-container {
+	display: flex;
+	flex: auto;
+	flex-direction: column;
+}
+
+.main {
+	text-align: center;
+	color: #fff;
+	font-size: 60pt;
+}
+
+/* --------------------------------------------------------------- */
