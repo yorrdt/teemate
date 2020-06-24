@@ -29,38 +29,24 @@ body {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 20px;
-	margin-bottom: 60px;
-	width: 460px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 300px;
 }
 
 /* --------------------------------------------------------------- */
-
-.main-discription h1 {
-	margin-bottom: 16px;
-	font-size: 64px;
-	font-weight: 500;
-	line-height: 1;
-	color: #fff;
-}
-
-.main-discription p {
-	color: #6a737d;
-	margin-bottom: 24px;
-	font-size: 20px;
-	font-weight: 400;
-}
 
 .main-form {
 
 }
 
 form {
-	width: 460px;
-	padding: 40px;
+	padding: 20px;
+	margin-top: 16px;
 	
 	background-color: #fafbfc;
-	border-radius: 3px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.3);
 	color: #24292e;
 }
 
@@ -69,7 +55,7 @@ form {
 	text-align: center;
 	font-size: 36pt;
 	color: #fff;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	text-decoration: none;
 }
 
@@ -78,57 +64,50 @@ form {
 }
 
 .form-header {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	font-size: 22px;
 	line-height: 26px;
-	font-weight: 700;
-}
-
-.form-group {
-	margin: 15px 0px;
-}
-
-.form-group dt {
-	margin-bottom: 6px;
+	font-weight: 500;
+	text-align: center;
+	color: #fff;
 }
 
 .form-label {
+	display: block;
 	font-weight: 600;
+	margin-bottom: 6px;
 }
 
 .form-control {
 	display: block;
 	width: 100%;
-	padding: 8px;
+	padding: 5px 12px;
 	font-size: 14px;
-	border-radius: 5px;
 	
 	line-height: 20px;
 	color: #24292e;
 	border: 1px solid #d1d5da;
+	border-radius: 6px;
 	outline: none;
 	box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
-}
-
-.form-control-note {
+	
 	margin-top: 5px;
-	margin-bottom: 0;
-	font-size: 12px;
+	margin-bottom: 15px;
 }
 
 .submit-button {
-	font-size: 16px;
+	position: relative;
+	font-size: 14px;
 	border-style: none;
 	overflow: visible;
 	text-transform: none;
 	
-	margin-top: 16px;
-	padding: 15px 32px;
+	margin-top: 5px;
+	padding: 8px 16px;
 	
 	width: 100%;
 	text-align: center;
 	
-	display: inline-block;
 	font-weight: 500;
 	color: #fff;
 	white-space: nowrap;
@@ -137,7 +116,7 @@ form {
 	user-select: none;
 	background-color: #2ebc4f;
 	border: none;
-	border-radius: 3px;
+	border-radius: 6px;
 	transition: .2s;
 	-moz-appearance: none;
 }
@@ -147,15 +126,22 @@ form {
 	border-color: #28a745;
 }
 
+.form-remind-password {
+	float: right;
+	color: #2ebc4f;
+	text-decoration: none;
+	font-weight: 500;
+}
+
 /* --------------------------------------------------------------- */
 
 .form-additionals {
-	width: 460px;
-	padding: 15px 0;
+	padding: 15px 20px;
 	margin-top: 16px;
 	
 	background-color: #fafbfc;
-	border-radius: 3px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.3);
 	color: #24292e;
 	text-align: center;
 }
@@ -164,5 +150,3 @@ form {
 	color: #2ebc4f;
 	text-decoration: none;
 }
-
-/* --------------------------------------------------------------- */

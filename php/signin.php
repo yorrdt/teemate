@@ -1,27 +1,5 @@
 <?php
 	require "db.php";
-	
-	$data = $_POST;
-	if(isset($data['do_login'])) { 
-		$errors = array();
-		$user = R::findOne('users', 'login = ?', array($data['login']));
-		
-		if($user) {
-			if(password_verify($data['password'], $user->password)) {
-				$_SESSION['logged_user'] = $user;
-				echo '<div style="color: green;">Вы успешно авторизованы!</div><hr>';
-				header('Location: profile.php');
-			} else {
-				$errors[] = 'Неверно введен пароль!'; 
-			}
-		} else {
-			$errors[] = 'Пользователь с таким логином не найден!'; 
-		}
-		
-		if(!empty($errors)) {
-			echo '<div style="color: red;">' . array_shift($errors) . '</div><hr>';
-		}
-	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,27 +13,35 @@
 			<main class="main-container">
 				<div class="main-form">
 					<a class="form-header-teemate" href="/">TeeMate</a>
+					<div class="form-header">Вход</div>
+					<?php
+						$data = $_POST;
+						if(isset($data['do_login'])) { 
+							$errors = array();
+							$user = R::findOne('users', 'login = ?', array($data['login']));
+							
+							if($user) {
+								if(password_verify($data['password'], $user->password)) {
+									$_SESSION['logged_user'] = $user;
+									header('Location: profile.php');
+								} else {
+									$errors[] = 'Неверно введен пароль!'; 
+								}
+							} else {
+								$errors[] = 'Пользователь с таким логином не найден.'; 
+							}
+							
+							if(!empty($errors)) {
+								echo '<div class="form-incorrect"><div class="form-incorrect-message">' . array_shift($errors) . '</div></div>';
+							}
+						}
+					?>
 					<form action="signin.php" method="POST">
-						<div class="form-header">Вход</div>
 						<div class="user-form">
-							<dl class="form-group">
-								<dt>
-									<label class="form-label">Username</label>
-								</dt>
-								<dd>
-									<input class="form-control" type="text" name="login" value="<?php echo @$data['login']; ?>">
-									<p class="form-control-note"><?php ?></p>
-								</dd>		
-							</dl>
-							<dl class="form-group">
-								<dt>
-									<label class="form-label">Пароль<a class="form-remind-password" href="/">Забыли пароль?</a></label>
-								</dt>
-								<dd>
-									<input class="form-control" type="password" name="password">
-									<p class="form-control-note"></p>
-								</dd>
-							</dl>
+							<label class="form-label">Username</label>
+							<input class="form-control" type="text" name="login" value="<?php echo @$data['login']; ?>">
+							<label class="form-label">Пароль<a class="form-remind-password" href="/">Забыли пароль?</a></label>
+							<input class="form-control" type="password" name="password">
 							<button class="submit-button" type="submit" name="do_login">Войти</button>
 						</div>
 					</form>

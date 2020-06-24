@@ -3,7 +3,7 @@
 	
 	if(isset($_SESSION['logged_user'])) {
 		
-	} else { 
+	} else {
 		header('Location: ../index.php'); 
 	}
  ?>
@@ -47,7 +47,7 @@
 							<hr></hr>
 							<a class="dropdown-item" href=""><span class="menu-item-ico" style="width: 21px">🏠</span>Profile</a>
 							<hr></hr>
-							<a class="dropdown-item" href=""><span class="menu-item-ico" style="width: 21px">⚙️</span>Settings</a>
+							<a class="dropdown-item" href="user-settings.php"><span class="menu-item-ico" style="width: 21px">⚙️</span>Settings</a>
 							<a class="dropdown-item" href=""><span class="menu-item-ico" style="width: 21px">❓</span>Help</a>
 							<hr></hr>
 							<a class="dropdown-item" href="signout.php"><span class="menu-item-ico" style="width: 21px">🚪</span>Sign out</a>
@@ -126,7 +126,7 @@
 					</div>
 					<div class="content-container">
 						<div class="content">
-							<form action="#" method="post">
+							<form action="#" method="POST">
 								<div class="user-text">
 									<textarea class="user-textarea" name="text" placeholder="Write about what your think"></textarea>
 									<input class="submit-button" type="reset" value="Send" onclick="onButtonClick()"/>

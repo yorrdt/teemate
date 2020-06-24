@@ -54,45 +54,17 @@
 				<div class="main">
 					<div class="main-form">
 						<a class="form-header-teemate" href="/">TeeMate</a>
+						<div class="form-header">Регистрация</div>
 						<form action="signup.php" method="POST">
-							<div class="form-header">Регистрация</div>
 							<div class="user-form">
-								<dl class="form-group">
-									<dt>
-										<label class="form-label">Username</label>
-									</dt>
-									<dd>
-										<input class="form-control" type="text" name="login" value="<?php echo @$data['login']; ?>">
-										<p class="form-control-note"><?php ?></p>
-									</dd>
-								</dl>
-								<dl class="form-group">
-									<dt>
-										<label class="form-label">E-mail</label>
-									</dt>
-									<dd>
-										<input class="form-control" type="email" name="email" value="<?php echo @$data['email']; ?>">
-										<p class="form-control-note"></p>
-									</dd>
-								</dl>
-								<dl class="form-group">
-									<dt>
-										<label class="form-label">Пароль</label>
-									</dt>
-									<dd>
-										<input class="form-control" type="password" name="password">
-										<p class="form-control-note"></p>
-									</dd>
-								</dl>
-								<dl class="form-group">
-									<dt>
-										<label class="form-label">Пароль еще раз</label>
-									</dt>
-									<dd>
-										<input class="form-control" type="password" name="password_repeat">
-										<p class="form-control-note"></p>
-									</dd>
-								</dl>
+								<label class="form-label">Username</label>
+								<input class="form-control" type="text" name="login" value="<?php echo @$data['login']; ?>">
+								<label class="form-label">E-mail</label>
+								<input class="form-control" type="email" name="email" value="<?php echo @$data['email']; ?>">
+								<label class="form-label">Пароль</label>
+								<input class="form-control" type="password" name="password">
+								<label class="form-label">Пароль еще раз</label>
+								<input class="form-control" type="password" name="password_repeat">
 								<button class="submit-button" type="submit" name="do_signup">Зарегистрироваться</button>
 							</div>
 						</form>
