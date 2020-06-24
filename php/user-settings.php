@@ -57,7 +57,7 @@
 							<div class="menu-header">
 								<img class="user-avatar" alt="" src="../img/Flying-Penguin.jpg" width="32px" height="32px">
 								<div class="user-names">
-									<div class="current-user"><?php echo $_SESSION['logged_user']->login; ?></div>
+									<div class="user-name"><?php echo $_SESSION['logged_user']->login; ?></div>
 									<div class="normal-text">Personal settings</div>
 								</div>
 							</div>

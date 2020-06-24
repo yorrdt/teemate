@@ -1,5 +1,9 @@
 <?php
 	require "php/db.php";
+	
+	if(isset($_SESSION['logged_user'])) {
+		header('Location: /php/profile.php');
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -4,7 +4,7 @@
 	if(isset($_SESSION['logged_user'])) {
 		
 	} else {
-		header('Location: ../index.php'); 
+		header('Location: ../'); 
 	}
  ?>
 <!DOCTYPE html>

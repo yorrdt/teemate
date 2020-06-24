@@ -11,7 +11,7 @@ body {
 
 	display: flex;
 	flex-direction: column;
-	color: 24292e;
+	color: #24292e;
 }
 
 /* --------------------------------------------------------------- */
@@ -312,7 +312,7 @@ details:not([open]) > :not(summary) {
 	line-height: 1.25;
 }
 
-.current-user {
+.user-name {
 	display: inline-block;
 	vertical-align: top;
 	overflow: hidden;
