@@ -25,10 +25,10 @@
 									$_SESSION['logged_user'] = $user;
 									header('Location: profile.php');
 								} else {
-									$errors[] = 'Неверно введен пароль!'; 
+									$errors[] = 'Неверно введен пароль'; 
 								}
 							} else {
-								$errors[] = 'Пользователь с таким логином не найден.'; 
+								$errors[] = 'Пользователь с таким логином не найден'; 
 							}
 							
 							if(!empty($errors)) {

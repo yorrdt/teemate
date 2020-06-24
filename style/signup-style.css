@@ -50,6 +50,20 @@ form {
 	color: #24292e;
 }
 
+.form-header-teemate:hover {
+	color: hsla(0, 0%, 100%, .7);
+}
+
+.form-incorrect {
+	position: relative;
+	padding: 15px 20px;
+	font-size: 13px;
+	border: 1px solid rgba(158,28,35,.2);
+	border-radius: 5px;
+	
+	background-color: #ffe3e6;
+}
+
 .form-header-teemate {
 	display: block;
 	text-align: center;
@@ -59,8 +73,8 @@ form {
 	text-decoration: none;
 }
 
-.form-header-teemate:hover {
-	color: hsla(0, 0%, 100%, .7);
+.form-incorrect-message {
+	text-align: center;
 }
 
 .form-header {
@@ -81,7 +95,7 @@ form {
 .form-control {
 	display: block;
 	width: 100%;
-	padding: 5px 12px;
+	padding: 5px 8px;
 	font-size: 14px;
 	
 	line-height: 20px;

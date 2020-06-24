@@ -1,45 +1,5 @@
 <?php
 	require "db.php";
-	
-	$data = $_POST;
-	if(isset($data['do_signup'])) {
-		$errors = array();
- 		if(trim($data['login']) == '') {
-			$errors[] = 'Введите логин!';
-		}
-		
-		if(trim($data['email']) == '') {
-			$errors[] = 'Введите Email!';
-		}
-		
-		if($data['password'] == '') {
-			$errors[] = 'Введите пароль!';
-		}
-		
-		if($data['password'] != $data['password_repeat']) {
-			$errors[] = 'Повторный пароль введен неверно!';
-		}
-		
-		if(R::count('users', "login = ?", array($data['login'])) > 0) {
-			$errors[] = 'Пользователь с таким логином уже существует!';
-		}
-		
-		if(R::count('users', "email = ?", array($data['email'])) > 0) {
-			$errors[] = 'Пользователь с таким Email уже существует!';
-		}
-		
-		if(empty($errors)) {
-			$user = R::dispense('users');
-			$user->login = $data['login'];
-			$user->email = $data['email'];
-			$user->password = password_hash($data['password'], PASSWORD_DEFAULT);
-			R::store($user);
-			echo '<div style="color: green;">Вы успешно зарегистрированы!</div><hr>';
-			header('Location: profile.php');
-		} else {
-			echo '<div style="color: red;">' . array_shift($errors) . '</div><hr>';
-		}
-	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,6 +15,46 @@
 					<div class="main-form">
 						<a class="form-header-teemate" href="/">TeeMate</a>
 						<div class="form-header">Регистрация</div>
+						<?php
+							$data = $_POST;
+							if(isset($data['do_signup'])) {
+								$errors = array();
+								if(trim($data['login']) == '') {
+									$errors[] = 'Введите логин';
+								}
+								
+								if(trim($data['email']) == '') {
+									$errors[] = 'Введите Email';
+								}
+								
+								if($data['password'] == '') {
+									$errors[] = 'Введите пароль';
+								}
+								
+								if($data['password'] != $data['password_repeat']) {
+									$errors[] = 'Пароли не совпадают';
+								}
+								
+								if(R::count('users', "login = ?", array($data['login'])) > 0) {
+									$errors[] = 'Пользователь с таким логином уже существует';
+								}
+								
+								if(R::count('users', "email = ?", array($data['email'])) > 0) {
+									$errors[] = 'Пользователь с таким Email уже существует';
+								}
+								
+								if(empty($errors)) {
+									$user = R::dispense('users');
+									$user->login = $data['login'];
+									$user->email = $data['email'];
+									$user->password = password_hash($data['password'], PASSWORD_DEFAULT);
+									R::store($user);
+									/* header('Location: profile.php'); */
+								} else {
+									echo '<div class="form-incorrect"><div class="form-incorrect-message">' . array_shift($errors) . '</div></div>';
+								}
+							}
+						?>
 						<form action="signup.php" method="POST">
 							<div class="user-form">
 								<label class="form-label">Username</label>

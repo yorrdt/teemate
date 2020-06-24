@@ -1,5 +1,16 @@
 <?php
 	require "db.php";
+	
+	$data = $_POST;
+	if(isset($data['do_saving'])) {
+		$user_settings = R::dispense('settings');
+		$user_settings->user_name = $data['user_name'];
+		$user_settings->user_bio = $data['user_bio'];
+		$user_settings->user_location = $data['user_location'];
+		$user_settings->user_id = $_SESSION['logged_user']->id;
+		R::store($user_settings);
+		echo 'Сохранено';
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,14 +84,14 @@
 						</div>
 						<div class="settings-inside">
 							<div class="settings-content">
-								<form action="#" method="POST">
+								<form action="user-settings.php" method="POST">
 									<div>
 										<dl class="form-group">
 											<dt>
 												<label for="user_profile_name">Name</label>
 											</dt>
 											<dd>
-												<input class="form-control" type="text" name="user-name" value="">
+												<input class="form-control" type="text" name="user_name" value="<?php echo @$data['user_name']; ?>">
 												<div class="note">note</div>
 											</dd>
 										</dl>
@@ -90,7 +101,7 @@
 											</dt>
 											<dd class="user-profile-bio-container">
 												<div class="textarea-wrapper">
-													<textarea class="form-control" name="" maxlength="160"></textarea>
+													<textarea class="form-control" name="user_bio" maxlength="160" value="<?php echo @$data['user_bio']; ?>"></textarea>
 												</div>
 												<div class="note">note</div>
 											</dd>
@@ -101,13 +112,11 @@
 												<label for="user_profile_location">Location</label>
 											</dt>
 											<dd>
-												<input class="form-control" type="text" name="user-location" value="">
+												<input class="form-control" type="text" name="user_location" value="<?php echo @$data['user_location']; ?>">
 												<div class="note">note</div>
 											</dd>
 										</dl>
-										<p>
-											<button class="submit-button" type="submit" name="do_login">Сохранить</button>
-										</p>
+										<button class="submit-button" type="submit" name="do_saving">Сохранить</button>
 									</div>
 								</form>
 							</div>
