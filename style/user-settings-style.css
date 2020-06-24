@@ -312,6 +312,12 @@ details:not([open]) > :not(summary) {
 	line-height: 1.25;
 }
 
+.selected {
+	border-left: 2px solid #f9826c;
+	background-color: #f6f8fa;
+	cursor: default;
+}
+
 .user-name {
 	display: inline-block;
 	vertical-align: top;
@@ -383,6 +389,12 @@ details:not([open]) > :not(summary) {
 	padding-left: 16px;
 }
 
+.settings-content-avatar {
+	padding-right: 16px;
+	padding-left: 16px;
+	display: inline-block;
+}
+
 /* ----------------------------- */
 
 .form-group {
@@ -397,7 +409,7 @@ input {
 	overflow: visible;
 }
 
-.form-group dt {
+.settings-content .form-group dt {
 	margin: 0 0 6px;
 }
 
@@ -434,13 +446,21 @@ input {
 	color: #586069;
 }
 
+hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #dfe2e5;
+}
+
 .user-profile-bio-container {
 	position: relative;
 }
 
-.form-group textarea {
+.textarea-wrapper {
 	width: 440px;
-	height: 5.35em;
 	min-height: 0;
 }
 
@@ -450,9 +470,63 @@ textarea.form-control {
 	line-height: 1.5;
 }
 
+.submit-button {
+	position: relative;
+	font-size: 14px;
+	border-style: none;
+	overflow: visible;
+	text-transform: none;
+	
+	margin-top: 5px;
+	padding: 8px 16px;
+	
+	text-align: center;
+	
+	font-weight: 500;
+	color: #fff;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	background-color: #2ebc4f;
+	border: none;
+	border-radius: 6px;
+	transition: .2s;
+	-moz-appearance: none;
+}
 
+.submit-button:hover {
+	background-color: #28a745;
+	border-color: #28a745;
+}
 
+.settings-content-avatar dl {
+	margin-top: 14px;
+	margin-bottom: 14px;
+}
 
+img {
+    border-style: none;
+}
+
+.avatar-label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.avatar-upload {
+	position: relative;
+	cursor: pointer;
+}
+
+.avatar-upload:hover {
+	filter: brightness(50%);
+}
+
+.user-avatar-edit {
+	color: #fff;
+	text-align: center;
+}
 
 
 

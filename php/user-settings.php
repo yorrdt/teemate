@@ -30,7 +30,7 @@
 				<div class="header-item relative">
 					<details class="details-overlay details-reset">
 						<summary class="details-header">
-							<img class="user-avatar" alt="" src="../img/Flying-Penguin.jpg" width="20px" height="20px">
+							<img class="user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="20px" height="20px">
 							<span class="dropdown-caret"></span>
 						</summary>
 						<div class="dropdown-menu" style="width: 180px;">
@@ -55,13 +55,13 @@
 					<div class="menu-container">
 						<nav class="menu">
 							<div class="menu-header">
-								<img class="user-avatar" alt="" src="../img/Flying-Penguin.jpg" width="32px" height="32px">
+								<img class="user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="32px" height="32px">
 								<div class="user-names">
 									<div class="user-name"><?php echo $_SESSION['logged_user']->login; ?></div>
 									<div class="normal-text">Personal settings</div>
 								</div>
 							</div>
-							<a class="menu-item" href="">Profile</a>
+							<a class="menu-item selected" href="">Profile</a>
 							<a class="menu-item" href="">Account</a>
 							<a class="menu-item" href="">Security</a>
 							<a class="menu-item" href="">Emails</a>
@@ -91,12 +91,36 @@
 											<dd class="user-profile-bio-container">
 												<div class="textarea-wrapper">
 													<textarea class="form-control" name="" maxlength="160"></textarea>
-												<div>
+												</div>
 												<div class="note">note</div>
 											</dd>
 										</dl>
+										<hr></hr>
+										<dl class="form-group">
+											<dt>
+												<label for="user_profile_location">Location</label>
+											</dt>
+											<dd>
+												<input class="form-control" type="text" name="user-location" value="">
+												<div class="note">note</div>
+											</dd>
+										</dl>
+										<p>
+											<button class="submit-button" type="submit" name="do_login">Сохранить</button>
+										</p>
 									</div>
 								</form>
+							</div>
+							<div class="settings-content-avatar">
+								<dl class="form-group">
+									<dt>
+										<label class="avatar-label">Profile picture</label>
+									</dt>
+									<dd class="avatar-upload">
+										<img class="user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="200px" height="200px">
+										<div class="user-avatar-edit">Change avatar</div>
+									</dd>
+								</dl>
 							</div>
 						</div>
 					</div>

@@ -37,7 +37,7 @@
 				<div class="header-item relative">
 					<details class="details-overlay details-reset">
 						<summary class="details-header">
-							<img class="user-avatar" alt="" src="../img/Flying-Penguin.jpg" width="20px" height="20px">
+							<img class="user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="20px" height="20px">
 							<span class="dropdown-caret"></span>
 						</summary>
 						<div class="dropdown-menu" style="width: 180px;">
@@ -65,7 +65,7 @@
 								<li>
 									<div class="menu-heading">
 										<a class="menu-heading-ref" href="">
-											<img class="user-avatar" alt="" src="../img/Flying-Penguin.jpg" width="40px" height="40px" title="@yorrdt">
+											<img class="user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="40px" height="40px" title="@yorrdt">
 											<div class="user-names">
 												<div class="user-name">Name Surname<span class="user-status"></span></div>
 												<div class="user-nickname">@<?php echo $_SESSION['logged_user']->login; ?></div>
@@ -124,14 +124,16 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="content-container">
-						<div class="content">
-							<form action="#" method="POST">
-								<div class="user-text">
-									<textarea class="user-textarea" name="text" placeholder="Write about what your think"></textarea>
-									<input class="submit-button" type="reset" value="Send" onclick="onButtonClick()"/>
-								</div>
-							</form>
+					<div class="content-container-wrapper">
+						<div class="content-container">
+							<div class="content">
+								<form action="#" method="POST">
+									<div class="user-text">
+										<textarea class="user-textarea" name="text" placeholder="Write about what your think"></textarea>
+										<input class="submit-button" type="reset" value="Send" onclick="onButtonClick()"/>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
 					<aside class="aside-container">
