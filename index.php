@@ -42,6 +42,11 @@
 			<main class="main-container">
 				<div class="main">
 					<div>WELCOME TO TEEMATE</div>
+					<div>
+						<?php 
+							echo "Зарегистрировано: " . R::count('users'); 
+						?>
+					</div>
 				</div>
 			</main>
 		</div>

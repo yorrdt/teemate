@@ -369,6 +369,7 @@ details:not([open]) > :not(summary) {
 	padding-bottom: 8px;
 	border-bottom: 1px solid #e1e4e8;
 	flex-flow: row wrap;
+	align-items: center;
 }
 
 .settings-subhead {
@@ -377,6 +378,25 @@ details:not([open]) > :not(summary) {
 	flex: 1 1 auto;
 }
 
+/* --------------------------- */
+
+@keyframes opacity {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.form-save-message {	
+	color: green;
+	animation: opacity 3s 1;
+	animation-timing-function: linear; 
+	opacity: 0;
+}
+
+/* --------------------------- */
 
 .settings-inside {
 	display: flex;
@@ -527,7 +547,6 @@ img {
 	color: #fff;
 	text-align: center;
 }
-
 
 
 

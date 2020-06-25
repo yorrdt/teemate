@@ -15,7 +15,7 @@
 		<title>TeeMate</title>
 		<link rel="stylesheet" href="../style/profile-style.css">
 	</head>
-	<body>
+	<body class="height-full">
 		<div class="header-wrapper">
 			<header class="header-container">
 				<div class="header-item">
@@ -57,18 +57,18 @@
 			</header>
 		</div>
 		<div class="main-wrapper">
-			<main class="main-container">
+			<main class="main-container height-full">
 				<div class="main height-full">
 					<div class="navbar-container">
-						<nav class="navbar height-full">
+						<nav class="navbar">
 							<ul>
 								<li>
 									<div class="menu-heading">
 										<a class="menu-heading-ref" href="">
-											<img class="user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="40px" height="40px" title="@yorrdt">
+											<img class="user-avatar avatar-sizing" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="40px" height="40px" title="@yorrdt">
 											<div class="user-names">
-												<div class="user-name">Name Surname<span class="user-status"></span></div>
-												<div class="user-nickname">@<?php echo $_SESSION['logged_user']->login; ?></div>
+												<div class="user-name"><?php echo $_SESSION['settings']->user_name; ?></div>
+												<div class="user-nickname"><?php echo $_SESSION['logged_user']->login; ?></div>
 											</div>
 										</a>
 									</div>
@@ -151,5 +151,5 @@
 	</body>
 	<script src="/script/additionally/jquery-3.5.1.min.js" type="text/javascript"></script>
 	<script src="/script/additionally/autosize.min.js"></script>
-	<script src="/script/main-script.js" type="text/javascript"></script>
+	<script src="/script/profile-script.js" type="text/javascript"></script>
 </html>

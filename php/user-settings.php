@@ -1,16 +1,5 @@
 <?php
 	require "db.php";
-	
-	$data = $_POST;
-	if(isset($data['do_saving'])) {
-		$user_settings = R::dispense('settings');
-		$user_settings->user_name = $data['user_name'];
-		$user_settings->user_bio = $data['user_bio'];
-		$user_settings->user_location = $data['user_location'];
-		$user_settings->user_id = $_SESSION['logged_user']->id;
-		R::store($user_settings);
-		echo 'Сохранено';
-	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,6 +70,26 @@
 					<div class="user-settings">
 						<div class="user-settings-header">
 							<h2 class="settings-subhead">Profile</h2>
+							<?php
+								$data = $_POST;
+								
+								if(isset($data['do_saving'])) {														
+									//$user_settings = R::dispense('settings');
+
+									$id = $_SESSION['logged_user']->id;
+									$user_settings = R::load('settings', $id);
+
+									$user_settings->user_name = $data['user_name'];
+									$user_settings->user_bio = $data['user_bio'];
+									$user_settings->user_location = $data['user_location'];
+	
+									R::store($user_settings);
+									echo '<div class="form-save-message">Сохранено</div>';
+									
+									$findUserId = R::findOne('settings', 'id = ?', array($_SESSION['logged_user']->id));
+									$_SESSION['settings'] = $findUserId;
+								}
+							?>
 						</div>
 						<div class="settings-inside">
 							<div class="settings-content">
@@ -91,7 +100,7 @@
 												<label for="user_profile_name">Name</label>
 											</dt>
 											<dd>
-												<input class="form-control" type="text" name="user_name" value="<?php echo @$data['user_name']; ?>">
+												<input class="form-control" type="text" name="user_name" value="<?php echo $_SESSION['settings']->user_name; ?>">
 												<div class="note">note</div>
 											</dd>
 										</dl>
@@ -101,7 +110,7 @@
 											</dt>
 											<dd class="user-profile-bio-container">
 												<div class="textarea-wrapper">
-													<textarea class="form-control" name="user_bio" maxlength="160" value="<?php echo @$data['user_bio']; ?>"></textarea>
+													<textarea class="form-control" name="user_bio" maxlength="160"><?php echo $_SESSION['settings']->user_bio; ?></textarea>
 												</div>
 												<div class="note">note</div>
 											</dd>
@@ -112,7 +121,7 @@
 												<label for="user_profile_location">Location</label>
 											</dt>
 											<dd>
-												<input class="form-control" type="text" name="user_location" value="<?php echo @$data['user_location']; ?>">
+												<input class="form-control" type="text" name="user_location" value="<?php echo $_SESSION['settings']->user_location; ?>">
 												<div class="note">note</div>
 											</dd>
 										</dl>
