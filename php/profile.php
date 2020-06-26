@@ -6,6 +6,8 @@
 	} else {
 		header('Location: ../'); 
 	}
+	
+	$findUser = R::findOne('users', 'id = ?', array($_SESSION['logged_user']->id));
  ?>
 <!DOCTYPE html>
 <html class="height-full" lang="en">
@@ -67,7 +69,7 @@
 										<a class="menu-heading-ref" href="">
 											<img class="user-avatar avatar-sizing" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="40px" height="40px" title="@yorrdt">
 											<div class="user-names">
-												<div class="user-name"><?php echo $_SESSION['settings']->user_name; ?></div>
+												<div class="user-name"><?php echo @$findUser->user_name; ?></div>
 												<div class="user-nickname"><?php echo $_SESSION['logged_user']->login; ?></div>
 											</div>
 										</a>

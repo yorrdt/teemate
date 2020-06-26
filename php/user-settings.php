@@ -73,22 +73,31 @@
 							<?php
 								$data = $_POST;
 								
-								if(isset($data['do_saving'])) {														
-									//$user_settings = R::dispense('settings');
+								if(isset($data['do_saving'])) {
+									$findUser = R::findOne('users', 'id = ?', array($_SESSION['logged_user']->id));
+									$user_settings = R::load('users', $findUser->id);
 
-									$id = $_SESSION['logged_user']->id;
-									$user_settings = R::load('settings', $id);
-
-									$user_settings->user_name = $data['user_name'];
-									$user_settings->user_bio = $data['user_bio'];
-									$user_settings->user_location = $data['user_location'];
-	
+									if($findUser->user_name == NULL && $data['user_name'] == ' ') {
+										$user_settings->user_name = ' ';
+									} else { 
+										$user_settings->user_name = $data['user_name']; 
+									}
+									if($findUser->user_bio == NULL && $data['user_bio'] == ' ') {
+										$user_settings->user_bio = ' ';
+									} else { 
+										$user_settings->user_bio = $data['user_bio'];
+									}
+									if($findUser->user_location == NULL && $data['user_location'] == ' ') {
+										$user_settings->user_location = ' ';
+									} else { 
+										$user_settings->user_location = $data['user_location'];
+									}
+		
 									R::store($user_settings);
 									echo '<div class="form-save-message">Сохранено</div>';
-									
-									$findUserId = R::findOne('settings', 'id = ?', array($_SESSION['logged_user']->id));
-									$_SESSION['settings'] = $findUserId;
 								}
+								
+								$findUser = R::findOne('users', 'id = ?', array($_SESSION['logged_user']->id));
 							?>
 						</div>
 						<div class="settings-inside">
@@ -100,7 +109,7 @@
 												<label for="user_profile_name">Name</label>
 											</dt>
 											<dd>
-												<input class="form-control" type="text" name="user_name" value="<?php echo $_SESSION['settings']->user_name; ?>">
+												<input class="form-control" type="text" name="user_name" value="<?php echo @$findUser->user_name; ?>">
 												<div class="note">note</div>
 											</dd>
 										</dl>
@@ -110,7 +119,7 @@
 											</dt>
 											<dd class="user-profile-bio-container">
 												<div class="textarea-wrapper">
-													<textarea class="form-control" name="user_bio" maxlength="160"><?php echo $_SESSION['settings']->user_bio; ?></textarea>
+													<textarea class="form-control" name="user_bio" maxlength="160"><?php echo @$findUser->user_bio; ?></textarea>
 												</div>
 												<div class="note">note</div>
 											</dd>
@@ -121,7 +130,7 @@
 												<label for="user_profile_location">Location</label>
 											</dt>
 											<dd>
-												<input class="form-control" type="text" name="user_location" value="<?php echo $_SESSION['settings']->user_location; ?>">
+												<input class="form-control" type="text" name="user_location" value="<?php echo @$findUser->user_location; ?>">
 												<div class="note">note</div>
 											</dd>
 										</dl>

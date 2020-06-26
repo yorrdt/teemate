@@ -44,7 +44,7 @@
 					<div>WELCOME TO TEEMATE</div>
 					<div>
 						<?php 
-							echo "Зарегистрировано: " . R::count('users'); 
+							echo R::count('users'); 
 						?>
 					</div>
 				</div>

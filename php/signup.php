@@ -49,7 +49,7 @@
 									$user->email = $data['email'];
 									$user->password = password_hash($data['password'], PASSWORD_DEFAULT);
 									R::store($user);
-									/* header('Location: profile.php'); */
+									header('Location: signin.php');
 								} else {
 									echo '<div class="form-incorrect"><div class="form-incorrect-message">' . array_shift($errors) . '</div></div>';
 								}

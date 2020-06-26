@@ -40,7 +40,7 @@
 						<div class="user-form">
 							<label class="form-label">Username</label>
 							<input class="form-control" type="text" name="login" value="<?php echo @$data['login']; ?>">
-							<label class="form-label">Пароль<a class="form-remind-password" href="/">Забыли пароль?</a></label>
+							<label class="form-label">Пароль<a class="form-remind-password" href="">Забыли пароль?</a></label>
 							<input class="form-control" type="password" name="password">
 							<button class="submit-button" type="submit" name="do_login">Войти</button>
 						</div>

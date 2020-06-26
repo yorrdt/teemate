@@ -1,4 +1,4 @@
-autosize(document.querySelectorAll('.user-textarea'));
+/* autosize(document.querySelectorAll('.user-textarea')); */
 
 
 
@@ -9,6 +9,5 @@ if($('.user-name').text() == '') {
 		"font-weight": "600",
 		"font-size": "26px",
 		"line-height": "1.25",
-		"color": "#fff",
 	});
 }
