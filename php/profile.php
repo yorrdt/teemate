@@ -9,13 +9,16 @@
 	
 	$findUser = R::findOne('users', 'id = ?', array($_SESSION['logged_user']->id));
  ?>
+<!-- За спрос не бьют в нос -->
+<!-- Не бывает глупых вопросов, бывают глупые ответы -->
+<!-- Грамотно составленный вопрос это уже половина ответа -->
 <!DOCTYPE html>
 <html class="height-full" lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>TeeMate</title>
 		<link rel="stylesheet" href="../style/profile-style.css">
+		<meta name="viewport" content="width=device-width">
 	</head>
 	<body class="height-full">
 		<div class="header-wrapper">

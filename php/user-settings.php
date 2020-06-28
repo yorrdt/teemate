@@ -100,13 +100,13 @@
 								$findUser = R::findOne('users', 'id = ?', array($_SESSION['logged_user']->id));
 							?>
 						</div>
-						<div class="settings-inside">
-							<div class="settings-content">
+						<div class="profile-settings">
+							<div class="settings-profile-content">
 								<form action="user-settings.php" method="POST">
 									<div>
 										<dl class="form-group">
 											<dt>
-												<label for="user_profile_name">Name</label>
+												<label>Name</label>
 											</dt>
 											<dd>
 												<input class="form-control" type="text" name="user_name" value="<?php echo @$findUser->user_name; ?>">
@@ -115,7 +115,7 @@
 										</dl>
 										<dl class="form-group">
 											<dt>
-												<label for="user_profile_bio">Bio</label>
+												<label>Bio</label>
 											</dt>
 											<dd class="user-profile-bio-container">
 												<div class="textarea-wrapper">
@@ -127,14 +127,14 @@
 										<hr></hr>
 										<dl class="form-group">
 											<dt>
-												<label for="user_profile_location">Location</label>
+												<label>Location</label>
 											</dt>
 											<dd>
 												<input class="form-control" type="text" name="user_location" value="<?php echo @$findUser->user_location; ?>">
 												<div class="note">note</div>
 											</dd>
 										</dl>
-										<button class="submit-button" type="submit" name="do_saving">Сохранить</button>
+										<button class="submit-button-primary" type="submit" name="do_saving">Сохранить</button>
 									</div>
 								</form>
 							</div>
@@ -148,6 +148,101 @@
 										<div class="user-avatar-edit">Change avatar</div>
 									</dd>
 								</dl>
+							</div>
+						</div>
+						<div class="account-settings">
+							<div class="change-username-header">
+								<h2 class="change-username-subhead">Change username</h2>
+							</div>
+							<div class="account-settings-content">
+								<form action="#" method="POST">
+									<div>
+										<dl class="form-group">
+											<dt>
+												<label>Enter a new username</label>
+											</dt>
+											<dd>
+												<input class="form-control" type="text" name="new_user_name" value="<?php ?>">
+												<div class="note">Choose a new username</div>
+											</dd>
+										</dl>
+										<button class="submit-button-default" type="submit" name="do_changing_username">Change my username</button>
+									</div>
+								</form>
+							</div>
+							<div class="delete-account-header">
+								<h2 class="delete-account-subhead">Delete account</h2>
+							</div>
+							<div class="delete-account-content">
+								<p>Once you delete your account, there is no going back. Please be certain.</p>
+								<button class="submit-button-default button-danger" type="submit" name="do_deleting_account">Delete your account</button>
+							</div>
+						</div>
+						<div class="security-settings">
+							<div class="security-settings-header">
+								<h2 class="security-settings-subhead">Change password</h2>
+							</div>
+							<div class="settings-security-content">
+								<form action="#" method="POST">
+									<div>
+										<dl class="form-group">
+											<dt>
+												<label>Old password</label>
+											</dt>
+											<dd>
+												<input class="form-control" type="text" name="old_password" value="<?php ?>">
+											</dd>
+										</dl>
+										<dl class="form-group">
+											<dt>
+												<label>New password</label>
+											</dt>
+											<dd>
+												<input class="form-control" type="text" name="new_password" value="<?php ?>">
+											</dd>
+										</dl>
+										<dl class="form-group">
+											<dt>
+												<label>Confirm new password</label>
+											</dt>
+											<dd>
+												<input class="form-control" type="text" name="confirm_password" value="<?php ?>">
+											</dd>
+										</dl>
+										<div class="note">note</div>
+										<p>
+											<button class="submit-button-default mr-8px" type="submit" name="do_updating_password">Update password</button>
+											<span>
+												<a class="forget-password" href="">I forgot my password</a>
+											</span>
+										</p>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="emails-settings">
+							<div class="emails-settings-header">
+								<h2 class="emails-settings-subhead">Emails</h2>
+							</div>
+							<div class="settings-emails-content">
+								<ul class="this-email">
+									<li class="row">
+										<h4><?php echo $_SESSION['logged_user']->email; ?></h4>
+									</li>
+								</ul>
+								<form action="#" method="POST">
+									<div>
+										<dl class="form-group">
+											<dt>
+												<label>Change email</label>
+											</dt>
+											<dd>
+												<input class="form-control" type="text" name="change_email" value="<?php ?>">
+											</dd>
+										</dl>
+										<button class="submit-button-default" type="submit" name="do_changing_email">Change email</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>

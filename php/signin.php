@@ -1,11 +1,16 @@
 <?php
 	require "db.php";
+	
+	if(isset($_SESSION['logged_user'])) {
+		header('Location: /php/profile.php');
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="../style/signin-style.css"/>
+		<meta name="viewport" content="width=device-width">
 		<title>Sign in to TeeMate</title>
 	</head>
 	<body>

@@ -274,6 +274,7 @@ details:not([open]) > :not(summary) {
 	padding-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 40px;
 	
 	display: flex;
 	flex: auto;
@@ -398,13 +399,13 @@ details:not([open]) > :not(summary) {
 
 /* --------------------------- */
 
-.settings-inside {
+.profile-settings {
 	display: flex;
 	margin-right: -16px;
 	margin-left: -16px;
 }
 
-.settings-content {
+.settings-profile-content {
 	padding-right: 16px;
 	padding-left: 16px;
 }
@@ -429,7 +430,7 @@ input {
 	overflow: visible;
 }
 
-.settings-content .form-group dt {
+.form-group dt {
 	margin: 0 0 6px;
 }
 
@@ -445,7 +446,7 @@ input {
 }
 
 .form-control {
-	padding: 5px 12px;
+	padding: 6px 8px;
 	font-size: 14px;
 	line-height: 20px;
 	color: #24292e;
@@ -485,12 +486,10 @@ hr {
 }
 
 textarea.form-control {
-	padding-top: 8px;
-	padding-bottom: 8px;
 	line-height: 1.5;
 }
 
-.submit-button {
+.submit-button-primary {
 	position: relative;
 	font-size: 14px;
 	border-style: none;
@@ -498,6 +497,7 @@ textarea.form-control {
 	text-transform: none;
 	
 	margin-top: 5px;
+	margin-bottom: 10px;
 	padding: 8px 16px;
 	
 	text-align: center;
@@ -515,7 +515,7 @@ textarea.form-control {
 	-moz-appearance: none;
 }
 
-.submit-button:hover {
+.submit-button-primary:hover {
 	background-color: #28a745;
 	border-color: #28a745;
 }
@@ -549,12 +549,163 @@ img {
 }
 
 
+/* -------------------------------------------- */
 
+.account-settings {
+	/* display: inline-block; */
+}
 
+.change-username-header {
+	margin-top: 40px;
+	
+	display: flex;
+	padding-bottom: 8px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #e1e4e8;
+	flex-flow: row wrap;
+}
 
+.change-username-subhead {
+	font-size: 24px;
+	font-weight: 400;
+	flex: 1 1 auto;
+}
 
+/* ------------------------------------------------- */
 
+.delete-account-content p {
+	margin-bottom: 10px;
+}
 
+.delete-account-header {
+	margin-top: 40px;
+	
+	display: flex;
+	padding-bottom: 8px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #e1e4e8;
+	flex-flow: row wrap;
+}
+
+.delete-account-subhead {
+	font-size: 24px;
+	font-weight: 600;
+	flex: 1 1 auto;
+	color: #cb2431;
+}
+
+.submit-button-default {
+	color: #24292e;
+	background-color: #fafbfc;
+	box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25);
+	transition: background-color .2s cubic-bezier(.3,0,.5,1);
+	
+	position: relative;
+	display: inline-block;
+	padding: 5px 16px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	border: 1px solid rgba(27,31,35,.15);	
+	border-radius: 6px;
+	-moz-appearance: none;
+	
+	overflow: visible;
+	text-transform: none;
+}
+
+.submit-button-default:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.submit-button-default:hover {
+	background-color: #f3f4f6;
+	transition-duration: .1s;
+	text-decoration: none;
+}
+
+.button-danger {
+	color: #cb2431;
+	transition: none;
+}
+
+.button-danger:hover {
+	color: #fff;
+	background-color: #cb2431;
+	border-color: rgba(27, 31, 35, .15);
+}
+
+/* ------------------------------------------------------- */
+
+.settings-security-content p {
+	margin-bottom: 10px;
+}
+
+.security-settings-header {
+	margin-top: 40px;
+	display: flex;
+	padding-bottom: 8px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #e1e4e8;
+	flex-flow: row wrap;
+}
+
+.security-settings-subhead {
+	font-size: 24px;
+	font-weight: 400;
+	flex: 1 1 auto;
+}
+
+.mr-8px {
+	margin-right: 8px;
+}
+
+.forget-password {	
+	/* color: #2ebc4f; */
+	color: #0366d6;
+	text-decoration: none;
+}
+
+/* ----------------------------------------------------------- */
+
+.emails-settings-header {
+	margin-top: 40px;
+	display: flex;
+	padding-bottom: 8px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #e1e4e8;
+	flex-flow: row wrap;
+}
+
+.emails-settings-subhead {
+	font-size: 24px;
+	font-weight: 400;
+	flex: 1 1 auto;
+}
+
+.this-email {
+	list-style: none;
+	
+	background-color: #fff;
+	border: 1px solid #e1e4e8;
+	border-radius: 6px;
+	
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.row {
+	padding: 16px;
+	margin-top: -1px;
+	list-style-type: none;
+	border-top: 1px solid #e1e4e8;
+}
 
 
 

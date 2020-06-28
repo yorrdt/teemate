@@ -19,7 +19,9 @@ body {
 
 /* --------------------------------------------------------------- */
 
-@media (max-width: 1230px) {
+/* 1366px */
+
+@media screen and (max-width: 1230px) {
 	.aside-container {
 		display: none !important;
 	}
@@ -33,7 +35,7 @@ body {
 	}
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
 	.navbar-container  .user-names, .menu-item > span {
 		display: none !important;
 	}
@@ -106,14 +108,14 @@ body {
 	}
 }
 
-@media (max-width: 740px) {
+@media screen and (max-width: 740px) {
 	.navbar-container {
 		display: none !important;
 		/* width: 100% !important; */
 	}
 }
 
-@media (max-width: 560px) {
+@media screen and (max-width: 560px) {
 	.header-container {
 		padding: 16px !important;
 		height: 30px !important;
@@ -548,7 +550,7 @@ hr::after, hr::before {
 
 .user-textarea {
 	display: block;
-	padding: 10px 10px;
+	padding: 6px 8px;
 	margin-bottom: 5px;
 	
 	width: calc(100% - 22px);

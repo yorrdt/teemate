@@ -10,6 +10,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="style/index-style.css"/>
+		<meta name="viewport" content="width=device-width">
 		<title>TeeMate</title>
 	</head>
 	<body>
@@ -41,12 +42,7 @@
 		<div class="main-wrapper">
 			<main class="main-container">
 				<div class="main">
-					<div>WELCOME TO TEEMATE</div>
-					<div>
-						<?php 
-							echo R::count('users'); 
-						?>
-					</div>
+					
 				</div>
 			</main>
 		</div>
