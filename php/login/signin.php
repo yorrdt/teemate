@@ -1,15 +1,15 @@
 <?php
-	require "db.php";
+	require "../db.php";
 	
 	if(isset($_SESSION['logged_user'])) {
-		header('Location: /php/profile.php');
+		header('Location: ../profile.php');
 	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../style/signin-style.css"/>
+		<link rel="stylesheet" href="../../style/signin-style.css"/>
 		<meta name="viewport" content="width=device-width">
 		<title>Sign in to TeeMate</title>
 	</head>
@@ -17,7 +17,7 @@
 		<div class="main-wrapper">
 			<main class="main-container">
 				<div class="main-form">
-					<a class="form-header-teemate" href="/">TeeMate</a>
+					<a class="form-header-teemate" href="../index.php">TeeMate</a>
 					<div class="form-header">Вход</div>
 					<?php
 						$data = $_POST;
@@ -28,7 +28,7 @@
 							if($user) {
 								if(password_verify($data['password'], $user->password)) {
 									$_SESSION['logged_user'] = $user;
-									header('Location: profile.php');
+									header('Location: ../profile.php');
 								} else {
 									$errors[] = 'Неверно введен пароль'; 
 								}

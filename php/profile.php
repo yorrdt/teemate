@@ -4,7 +4,7 @@
 	if(isset($_SESSION['logged_user'])) {
 		
 	} else {
-		header('Location: ../'); 
+		header('Location: index.php'); 
 	}
 	
 	$findUser = R::findOne('users', 'id = ?', array($_SESSION['logged_user']->id));
@@ -24,7 +24,7 @@
 		<div class="header-wrapper">
 			<header class="header-container">
 				<div class="header-item">
-					<a class="hamburger-wrapper-ref" href="/">
+					<a class="hamburger-wrapper-ref" href="">
 						<div class="hamburger">
 							<div class="ham1"></div>
 							<div class="ham2"></div>
@@ -52,10 +52,10 @@
 							<hr></hr>
 							<a class="dropdown-item" href=""><span class="menu-item-ico" style="width: 21px">🏠</span>Profile</a>
 							<hr></hr>
-							<a class="dropdown-item" href="user-settings.php"><span class="menu-item-ico" style="width: 21px">⚙️</span>Settings</a>
+							<a class="dropdown-item" href="settings/user-profile-settings.php"><span class="menu-item-ico" style="width: 21px">⚙️</span>Settings</a>
 							<a class="dropdown-item" href=""><span class="menu-item-ico" style="width: 21px">❓</span>Help</a>
 							<hr></hr>
-							<a class="dropdown-item" href="signout.php"><span class="menu-item-ico" style="width: 21px">🚪</span>Sign out</a>
+							<a class="dropdown-item" href="login/signout.php"><span class="menu-item-ico" style="width: 21px">🚪</span>Sign out</a>
 						</div>
 					</details>
 				</div>
@@ -70,7 +70,7 @@
 								<li>
 									<div class="menu-heading">
 										<a class="menu-heading-ref" href="">
-											<img class="user-avatar avatar-sizing" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="40px" height="40px" title="@yorrdt">
+											<img class="user-avatar avatar-sizing" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="32px" height="32px" title="@yorrdt">
 											<div class="user-names">
 												<div class="user-name"><?php echo @$findUser->user_name; ?></div>
 												<div class="user-nickname"><?php echo $_SESSION['logged_user']->login; ?></div>
@@ -138,6 +138,14 @@
 										<input class="submit-button" type="reset" value="Send" onclick="onButtonClick()"/>
 									</div>
 								</form>
+								<ul class="post">
+									<li class="row">
+										<h4>Post header</h4>
+										<ul>
+											<li>eojfjoefjsjefjseofose</li>
+										</ul>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>

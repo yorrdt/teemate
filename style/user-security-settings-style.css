@@ -368,6 +368,7 @@ details:not([open]) > :not(summary) {
 .user-settings-header {
 	display: flex;
 	padding-bottom: 8px;
+	margin-bottom: 16px;
 	border-bottom: 1px solid #e1e4e8;
 	flex-flow: row wrap;
 	align-items: center;
@@ -476,123 +477,7 @@ hr {
 	border-bottom: 1px solid #dfe2e5;
 }
 
-.user-profile-bio-container {
-	position: relative;
-}
-
-.textarea-wrapper {
-	width: 440px;
-	min-height: 0;
-}
-
-textarea.form-control {
-	line-height: 1.5;
-}
-
-.submit-button-primary {
-	position: relative;
-	font-size: 14px;
-	border-style: none;
-	overflow: visible;
-	text-transform: none;
-	
-	margin-top: 5px;
-	margin-bottom: 10px;
-	padding: 8px 16px;
-	
-	text-align: center;
-	
-	font-weight: 500;
-	color: #fff;
-	white-space: nowrap;
-	vertical-align: middle;
-	cursor: pointer;
-	user-select: none;
-	background-color: #2ebc4f;
-	border: none;
-	border-radius: 6px;
-	transition: .2s;
-	-moz-appearance: none;
-}
-
-.submit-button-primary:hover {
-	background-color: #28a745;
-	border-color: #28a745;
-}
-
-.settings-content-avatar dl {
-	margin-top: 14px;
-	margin-bottom: 14px;
-}
-
-img {
-    border-style: none;
-}
-
-.avatar-label {
-	display: block;
-	margin-bottom: 8px;
-}
-
-.avatar-upload {
-	position: relative;
-	cursor: pointer;
-}
-
-.avatar-upload:hover {
-	filter: brightness(50%);
-}
-
-.user-avatar-edit {
-	color: #fff;
-	text-align: center;
-}
-
-
-/* -------------------------------------------- */
-
-.account-settings {
-	/* display: inline-block; */
-}
-
-.change-username-header {
-	margin-top: 40px;
-	
-	display: flex;
-	padding-bottom: 8px;
-	margin-bottom: 16px;
-	border-bottom: 1px solid #e1e4e8;
-	flex-flow: row wrap;
-}
-
-.change-username-subhead {
-	font-size: 24px;
-	font-weight: 400;
-	flex: 1 1 auto;
-}
-
-/* ------------------------------------------------- */
-
-.delete-account-content p {
-	margin-bottom: 10px;
-}
-
-.delete-account-header {
-	margin-top: 40px;
-	
-	display: flex;
-	padding-bottom: 8px;
-	margin-bottom: 16px;
-	border-bottom: 1px solid #e1e4e8;
-	flex-flow: row wrap;
-}
-
-.delete-account-subhead {
-	font-size: 24px;
-	font-weight: 600;
-	flex: 1 1 auto;
-	color: #cb2431;
-}
+/* ----------------------------------------------- */
 
 .submit-button-default {
 	color: #24292e;
@@ -629,17 +514,6 @@ img {
 	text-decoration: none;
 }
 
-.button-danger {
-	color: #cb2431;
-	transition: none;
-}
-
-.button-danger:hover {
-	color: #fff;
-	background-color: #cb2431;
-	border-color: rgba(27, 31, 35, .15);
-}
-
 /* ------------------------------------------------------- */
 
 .settings-security-content p {
@@ -647,7 +521,6 @@ img {
 }
 
 .security-settings-header {
-	margin-top: 40px;
 	display: flex;
 	padding-bottom: 8px;
 	margin-bottom: 16px;
@@ -672,40 +545,6 @@ img {
 }
 
 /* ----------------------------------------------------------- */
-
-.emails-settings-header {
-	margin-top: 40px;
-	display: flex;
-	padding-bottom: 8px;
-	margin-bottom: 16px;
-	border-bottom: 1px solid #e1e4e8;
-	flex-flow: row wrap;
-}
-
-.emails-settings-subhead {
-	font-size: 24px;
-	font-weight: 400;
-	flex: 1 1 auto;
-}
-
-.this-email {
-	list-style: none;
-	
-	background-color: #fff;
-	border: 1px solid #e1e4e8;
-	border-radius: 6px;
-	
-	padding-left: 0;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-.row {
-	padding: 16px;
-	margin-top: -1px;
-	list-style-type: none;
-	border-top: 1px solid #e1e4e8;
-}
 
 
 

@@ -1,15 +1,15 @@
 <?php
-	require "db.php";
+	require "../db.php";
 	
 	if(isset($_SESSION['logged_user'])) {
-		header('Location: /php/profile.php');
+		header('Location: ../profile.php');
 	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="../style/signup-style.css"/>
+		<link rel="stylesheet" href="../../style/signup-style.css"/>
 		<meta name="viewport" content="width=device-width">
 		<title>TeeMate</title>
 	</head>
@@ -18,7 +18,7 @@
 			<main class="main-container">
 				<div class="main">
 					<div class="main-form">
-						<a class="form-header-teemate" href="/">TeeMate</a>
+						<a class="form-header-teemate" href="../index.php">TeeMate</a>
 						<div class="form-header">Регистрация</div>
 						<?php
 							$data = $_POST;
