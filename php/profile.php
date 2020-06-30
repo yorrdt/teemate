@@ -70,7 +70,7 @@
 								<li>
 									<div class="menu-heading">
 										<a class="menu-heading-ref" href="">
-											<img class="user-avatar avatar-sizing" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="32px" height="32px" title="@yorrdt">
+											<img class="user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="32px" height="32px" title="@<?php echo $_SESSION['logged_user']->login; ?>">
 											<div class="user-names">
 												<div class="user-name"><?php echo @$findUser->user_name; ?></div>
 												<div class="user-nickname"><?php echo $_SESSION['logged_user']->login; ?></div>
@@ -132,20 +132,44 @@
 					<div class="content-container-wrapper">
 						<div class="content-container">
 							<div class="content">
-								<form action="#" method="POST">
-									<div class="user-text">
-										<textarea class="user-textarea" name="text" placeholder="Write about what your think"></textarea>
-										<input class="submit-button" type="reset" value="Send" onclick="onButtonClick()"/>
+								<div class="textarea-container">
+									<form action="#" method="POST">
+										<div class="user-text">
+											<img class="post-user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="36px" height="36px">
+											<textarea class="user-textarea" name="text" placeholder="Write about what your think"></textarea>
+										</div>
+										<div class="textarea-submenu">
+											<input class="submit-button-default" type="reset" value="Send" onclick="onButtonClick()"/>
+										</div>
+									</form>
+								</div>
+								<div class="post">
+									<div class="post-header">
+										<a class="post-avatar" href="">
+											<img class="post-user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="36px" height="36px">
+										</a>
+										<div class="post-data">
+											<div class="post-user-name"><?php echo @$findUser->user_name; ?></div>
+											<div class="post-pubtime"><?php echo date("d.m.Y"); ?></div>
+										</div>
 									</div>
-								</form>
-								<ul class="post">
-									<li class="row">
-										<h4>Post header</h4>
-										<ul>
-											<li>eojfjoefjsjefjseofose</li>
-										</ul>
-									</li>
-								</ul>
+									<div class="row">
+										<p>post text</p>
+									</div>
+									<div class="post-footer">
+										<div class="post-likes-comments">
+											<a class="likes-counter border" href="">
+												<div class="post-likes">2 Likes</div>
+											</a>
+											<a class="comments-counter border" href="">
+												<div class="post-comments">15 Comments</div>
+											</a>
+										</div>
+										<a class="views-counter border" href="">
+											<div class="post-views">48 Views</div>
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

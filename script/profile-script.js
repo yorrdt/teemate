@@ -1,9 +1,11 @@
-/* autosize(document.querySelectorAll('.user-textarea')); */
+autosize(document.querySelectorAll('.user-textarea'));
 
-
+function onButtonClick() {
+	$('.user-textarea').height(50);
+}
 
 if($('.user-name').text() == '') {
-	console.log('.user-name is empty!');
+	//console.log('.user-name is empty!');
 	$('.user-name').hide();
 	$('.user-nickname').css({
 		"font-weight": "600",

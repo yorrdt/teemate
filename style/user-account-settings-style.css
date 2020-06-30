@@ -548,11 +548,6 @@ hr {
 	text-transform: none;
 }
 
-.submit-button-default:focus {
-	outline: none;
-	box-shadow: none;
-}
-
 .submit-button-default:hover {
 	background-color: #f3f4f6;
 	transition-duration: .1s;
