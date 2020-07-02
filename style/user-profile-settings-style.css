@@ -489,34 +489,35 @@ textarea.form-control {
 	line-height: 1.5;
 }
 
-.submit-button-default {
-	color: #24292e;
-	background-color: #fafbfc;
-	box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25);
-	transition: background-color .2s cubic-bezier(.3,0,.5,1);
-	
+.submit-button-primary {
 	position: relative;
-	display: inline-block;
-	padding: 5px 16px;
 	font-size: 14px;
+	border-style: none;
+	overflow: visible;
+	text-transform: none;
+	margin-top: 5px;
+	padding: 8px 16px;
+	text-align: center;
 	font-weight: 500;
-	line-height: 20px;
+	color: #fff;
 	white-space: nowrap;
 	vertical-align: middle;
 	cursor: pointer;
 	user-select: none;
-	border: 1px solid rgba(27,31,35,.15);	
+	background-color: #2ebc4f;
+	border: none;
 	border-radius: 6px;
+	transition: .2s;
 	-moz-appearance: none;
-	
-	overflow: visible;
-	text-transform: none;
 }
 
-.submit-button-default:hover {
-	background-color: #f3f4f6;
-	transition-duration: .1s;
-	text-decoration: none;
+.submit-button-primary:hover {
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.submit-button-primary:focus {
+	outline: none;
 }
 
 .settings-content-avatar dl {

@@ -43,7 +43,7 @@
 							<a class="dropdown-item" href=""><span class="menu-item-ico" style="width: 21px">⚙️</span>Settings</a>
 							<a class="dropdown-item" href=""><span class="menu-item-ico" style="width: 21px">❓</span>Help</a>
 							<hr></hr>
-							<a class="dropdown-item" href="/login/signout.php"><span class="menu-item-ico" style="width: 21px">🚪</span>Sign out</a>
+							<a class="dropdown-item" href="../login/signout.php"><span class="menu-item-ico" style="width: 21px">🚪</span>Sign out</a>
 						</div>
 					</details>
 				</div>

@@ -22,6 +22,7 @@
 						<div class="form-header">Регистрация</div>
 						<?php
 							$data = $_POST;
+							
 							if(isset($data['do_signup'])) {
 								$errors = array();
 								if(trim($data['login']) == '') {
@@ -70,7 +71,7 @@
 								<input class="form-control" type="password" name="password">
 								<label class="form-label">Пароль еще раз</label>
 								<input class="form-control" type="password" name="password_repeat">
-								<button class="submit-button" type="submit" name="do_signup">Зарегистрироваться</button>
+								<button class="submit-button-primary" type="submit" name="do_signup">Зарегистрироваться</button>
 							</div>
 						</form>
 						<div class="form-additionals">

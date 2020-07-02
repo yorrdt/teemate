@@ -8,6 +8,31 @@
 	}
 	
 	$findUser = R::findOne('users', 'id = ?', array($_SESSION['logged_user']->id));
+	
+	
+	$data = $_POST;
+	
+ 	if(isset($data['do_posting'])) {
+ 		$errors = array();
+		
+		if(trim($data['textarea']) == '') {
+			$errors[] = 'Пустое поле';
+		}
+		
+		if(empty($errors)) {
+			$userID = 'articles' . $_SESSION['logged_user']->id;
+			$post = R::dispense($userID);
+			$post->author = $_SESSION['logged_user']->login;
+			$post->text = $data['textarea'];
+			$post->pubdate = date('d.m.Y H:i', strtotime('+3 hour'));
+			$post->count_of_likes = 0;
+			$post->count_of_comments = 0;
+			$post->count_of_views = 0;
+			R::store($post);
+		} else {
+			//echo array_shift($errors);
+		}
+	} 
  ?>
 <!-- За спрос не бьют в нос -->
 <!-- Не бывает глупых вопросов, бывают глупые ответы -->
@@ -133,53 +158,67 @@
 						<div class="content-container">
 							<div class="content">
 								<div class="textarea-container">
-									<form action="#" method="POST">
+									<form action="profile.php" method="POST">
 										<div class="user-text">
-											<img class="post-user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="36px" height="36px">
-											<textarea class="user-textarea" name="text" placeholder="Write about what your think"></textarea>
+											<textarea class="user-textarea" name="textarea" placeholder="Write about what your think"></textarea>
 										</div>
 										<div class="textarea-submenu">
-											<input class="submit-button-default" type="reset" value="Send" onclick="onButtonClick()"/>
+											<button class="submit-button-default" type="submit" name="do_posting" onclick="textareaHeightChecking()">Send</button>
 										</div>
 									</form>
 								</div>
-								<div class="post">
-									<div class="post-header">
-										<a class="post-avatar" href="">
-											<img class="post-user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="36px" height="36px">
-										</a>
-										<div class="post-data">
-											<div class="post-user-name"><?php echo @$findUser->user_name; ?></div>
-											<div class="post-pubtime"><?php echo date("d.m.Y"); ?></div>
-										</div>
-									</div>
-									<div class="row">
-										<p>post text</p>
-									</div>
-									<div class="post-footer">
-										<div class="post-likes-comments">
-											<a class="likes-counter border" href="">
-												<div class="post-likes">2 Likes</div>
-											</a>
-											<a class="comments-counter border" href="">
-												<div class="post-comments">15 Comments</div>
-											</a>
-										</div>
-										<a class="views-counter border" href="">
-											<div class="post-views">48 Views</div>
-										</a>
-									</div>
-								</div>
+								<?php
+										$userID = 'articles' . $_SESSION['logged_user']->id;
+										$findCountOfPost = R::count($userID);
+										
+										if($findCountOfPost > 10) {
+											$d = $findCountOfPost - 10;
+											$limit = [$d, $findCountOfPost];
+											$findPost = R::findAll($userID, 'ORDER BY id ASC LIMIT ?', [$limit]);
+										} else {
+											$findPost = R::findAll($userID, 'ORDER BY id ASC LIMIT ?', [10]);
+										}
+										
+										if($findCountOfPost) {
+											foreach(array_reverse($findPost) as $fp) {
+												echo '<div class="post">
+														<div class="post-header">
+															<a class="post-avatar" href="">
+																<img class="post-user-avatar" alt="' . $_SESSION['logged_user']->login . '" src="../img/Flying-Penguin.jpg" width="36px" height="36px">
+															</a>
+															<div class="post-data">
+																<div class="post-user-name">' . $fp->author . '</div>
+																<div class="post-pubtime">' . $fp->pubdate . '</div>
+															</div>
+														</div>
+														<div class="row">
+															<p>' . $fp->text . '</p>
+														</div>
+														<div class="post-footer">
+															<div class="post-likes-comments">
+																<a class="likes-counter border" href="">
+																	<div class="post-likes">0 Likes</div>
+																</a>
+																<a class="comments-counter border" href="">
+																	<div class="post-comments">0 Comments</div>
+																</a>
+															</div>
+															<a class="views-counter border" href="">
+																<div class="post-views">0 Views</div>
+															</a>
+														</div>
+													</div>';
+											}
+										} else {
+											echo '<div style="text-align: center;">No post yet</div>';
+										}
+								?>
 							</div>
 						</div>
 					</div>
 					<aside class="aside-container">
 						<div class="aside">
-							<h1>The Trooper</h1>
-							<p>You'll take my life but I'll take yours too</p>
-							<p>You'll fire your musket but I'll run you through</p>
-							<p>So when you're waiting for the next attack</p>
-							<p>You'd better stand there's no turning back</p>
+							<!-- Something will be here -->
 						</div>
 					</aside>
 				</div>

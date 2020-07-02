@@ -109,19 +109,16 @@ form {
 	margin-bottom: 15px;
 }
 
-.submit-button {
+.submit-button-primary {
 	position: relative;
 	font-size: 14px;
 	border-style: none;
 	overflow: visible;
 	text-transform: none;
-	
 	margin-top: 5px;
 	padding: 8px 16px;
-	
 	width: 100%;
 	text-align: center;
-	
 	font-weight: 500;
 	color: #fff;
 	white-space: nowrap;
@@ -135,9 +132,13 @@ form {
 	-moz-appearance: none;
 }
 
-.submit-button:hover {
+.submit-button-primary:hover {
 	background-color: #28a745;
 	border-color: #28a745;
+}
+
+.submit-button-primary:focus {
+	outline: none;
 }
 
 .form-remind-password {

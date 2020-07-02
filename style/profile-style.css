@@ -575,8 +575,6 @@ hr::after, hr::before {
 	
 	display: flex;
 	flex: auto;
-	align-items: center;
-	flex-wrap: nowrap;
 }
 
 .user-textarea:focus {
@@ -618,6 +616,10 @@ hr::after, hr::before {
 	background-color: #f3f4f6;
 	transition-duration: .1s;
 	text-decoration: none;
+}
+
+.submit-button-default:focus { 
+	outline: none;
 }
 
 /* --------------------------------------------------------------- */

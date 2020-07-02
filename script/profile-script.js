@@ -1,7 +1,10 @@
 autosize(document.querySelectorAll('.user-textarea'));
 
-function onButtonClick() {
-	$('.user-textarea').height(50);
+function textareaHeightChecking() {
+	if($('.user-textarea') > 50) {
+		$('.user-textarea').height(50);
+		console.log('textarea is more than 50px!');
+	}
 }
 
 if($('.user-name').text() == '') {
@@ -13,3 +16,5 @@ if($('.user-name').text() == '') {
 		"line-height": "1.25",
 	});
 }
+
+

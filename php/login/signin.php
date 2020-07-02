@@ -47,7 +47,7 @@
 							<input class="form-control" type="text" name="login" value="<?php echo @$data['login']; ?>">
 							<label class="form-label">Пароль<a class="form-remind-password" href="">Забыли пароль?</a></label>
 							<input class="form-control" type="password" name="password">
-							<button class="submit-button" type="submit" name="do_login">Войти</button>
+							<button class="submit-button-primary" type="submit" name="do_login">Войти</button>
 						</div>
 					</form>
 					<div class="form-additionals">
