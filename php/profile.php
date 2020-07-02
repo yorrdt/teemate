@@ -7,7 +7,7 @@
 		header('Location: index.php'); 
 	}
 	
-	$findUser = R::findOne('users', 'id = ?', array($_SESSION['logged_user']->id));
+	$findUser = R::findOne('users');
 	
 	
 	$data = $_POST;
@@ -95,7 +95,7 @@
 								<li>
 									<div class="menu-heading">
 										<a class="menu-heading-ref" href="">
-											<img class="user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="32px" height="32px" title="@<?php echo $_SESSION['logged_user']->login; ?>">
+											<img class="user-avatar" alt="@<?php echo $_SESSION['logged_user']->login; ?>" src="../img/Flying-Penguin.jpg" width="36px" height="36px" title="@<?php echo $_SESSION['logged_user']->login; ?>">
 											<div class="user-names">
 												<div class="user-name"><?php echo @$findUser->user_name; ?></div>
 												<div class="user-nickname"><?php echo $_SESSION['logged_user']->login; ?></div>
@@ -180,18 +180,25 @@
 											$findPost = R::findAll($userID);
 										}
 										*/
-										
+										$findPost = R::findAll($userID);
 										if($countOfPosts) {
 											foreach(array_reverse($findPost) as $fp) {
 												echo '<div class="post">
 														<div class="post-header">
 															<a class="post-avatar" href="">
-																<img class="post-user-avatar" alt="' . $_SESSION['logged_user']->login . '" src="../img/Flying-Penguin.jpg" width="36px" height="36px">
+																<img class="post-user-avatar" alt="' . $_SESSION['logged_user']->login . '" src="../img/Flying-Penguin.jpg" width="34px" height="34px">
 															</a>
 															<div class="post-data">
 																<div class="post-user-name">' . $fp->author . '</div>
 																<div class="post-pubtime">' . $fp->pubdate . '</div>
 															</div>
+															<a class="post-actions-wrapper" href="">
+																<div class="post-actions">
+																	<div class="pt1"></div>
+																	<div class="pt2"></div>
+																	<div class="pt3"></div>
+																</div>
+															</a>
 														</div>
 														<div class="row">
 															<p>' . $fp->text . '</p>
