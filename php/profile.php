@@ -169,17 +169,19 @@
 								</div>
 								<?php
 										$userID = 'articles' . $_SESSION['logged_user']->id;
-										$findCountOfPost = R::count($userID);
+										$countOfPosts = R::count($userID);
 										
-										if($findCountOfPost > 10) {
-											$d = $findCountOfPost - 10;
-											$limit = [$d, $findCountOfPost];
-											$findPost = R::findAll($userID, 'ORDER BY id ASC LIMIT ?', [$limit]);
+										/*
+										$limit = 15;
+										if($countOfPosts > $limit) {
+											$lower = $countOfPosts - $limit;
+											$findPost = R::findAll($userID, 'id > ?', [$lower]);
 										} else {
-											$findPost = R::findAll($userID, 'ORDER BY id ASC LIMIT ?', [10]);
+											$findPost = R::findAll($userID);
 										}
+										*/
 										
-										if($findCountOfPost) {
+										if($countOfPosts) {
 											foreach(array_reverse($findPost) as $fp) {
 												echo '<div class="post">
 														<div class="post-header">
