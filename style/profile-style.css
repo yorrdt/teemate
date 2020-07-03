@@ -667,6 +667,9 @@ hr::after, hr::before {
 }
 
 .post {
+	display: flex;
+	flex-direction: column;
+	position: relative;
 	list-style: none;
 	
 	background-color: #fff;
@@ -674,10 +677,6 @@ hr::after, hr::before {
 	border-radius: 6px;
 	
 	margin-bottom: 20px;
-}
-
-.post-data {
-	flex: auto;
 }
 
 .row {
@@ -710,13 +709,11 @@ hr::after, hr::before {
 
 /* --------------------------------------------------- */
 
-.post-actions-wrapper {
-	height: inherit;
-}
-
 .post-actions {
-	width: 8px;
+	margin-right: 16px;
 	height: inherit;
+	position: absolute;
+	right: 0;
 }
 
 .pt1, .pt2, .pt3 {
@@ -729,6 +726,114 @@ hr::after, hr::before {
 .pt2 {
 	margin: 2px 0;
 }
+
+
+
+/* ----------------------------------------------------- */
+
+.details-post-header {
+	cursor: pointer;
+	display: list-item;
+}
+
+.details-post-header::before {
+	list-style: none;
+}
+
+.post-dropdown-item {
+	color: #24292e;
+	text-decoration: none;
+	display: block;
+	padding: 4px 8px 4px 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.post-dropdown-item:hover {
+	background-color: #eaecef;
+	text-decoration: none;
+	outline: none;
+}
+
+.post-details-overlay[open] > summary::before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 80;
+    display: block;
+    cursor: default;
+    content: "";
+    background: transparent;
+}
+
+.post-details-reset > summary::before {
+    display: none;
+}
+
+.post-details-reset > summary {
+	list-style: none;
+	outline: none;
+}
+
+.post-actions-wrapper details > summary::-webkit-details-marker {
+	display: none;
+}
+
+
+/* --------------------------------------------------------------- */
+
+
+.post-dropdown-menu {
+    position: absolute;
+    top: 0px;
+    z-index: 9999;
+    width: 160px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 2px;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 4px;
+    box-shadow: 0 1px 15px rgba(27, 31, 35, .15);
+	
+	display: block;
+	right: 0;
+	left: auto;
+	margin-top: -12px;
+	margin-right: -12px;
+}
+
+details:not([open]) > :not(summary) {
+    display: none !important;
+}
+
+/*
+.post-dropdown-menu::before {
+	top: -16px;
+	right: 9px;
+	left: auto;
+}
+
+.post-dropdown-menu::after {
+	top: -14px;
+	right: 10px;
+	left: auto;
+}
+
+.post-dropdown-menu::after, .dropdown-menu::before {
+	position: absolute;
+	display: inline-block;
+	content: "";
+	
+	border: 7px solid transparent;
+    border-bottom-color: #fff;
+} 
+*/
 
 
 

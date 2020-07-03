@@ -185,20 +185,30 @@
 											foreach(array_reverse($findPost) as $fp) {
 												echo '<div class="post">
 														<div class="post-header">
-															<a class="post-avatar" href="">
+															<div class="post-avatar" href="">
 																<img class="post-user-avatar" alt="' . $_SESSION['logged_user']->login . '" src="../img/Flying-Penguin.jpg" width="34px" height="34px">
-															</a>
+															</div>
 															<div class="post-data">
 																<div class="post-user-name">' . $fp->author . '</div>
 																<div class="post-pubtime">' . $fp->pubdate . '</div>
 															</div>
-															<a class="post-actions-wrapper" href="">
-																<div class="post-actions">
-																	<div class="pt1"></div>
-																	<div class="pt2"></div>
-																	<div class="pt3"></div>
-																</div>
-															</a>
+															<div class="post-actions">
+																<details class="post-details-overlay post-details-reset">
+																	<summary class="details-post-header">
+																		<span class="post-dropdown">
+																			<div class="pt1"></div>
+																			<div class="pt2"></div>
+																			<div class="pt3"></div>
+																		</span>
+																	</summary>
+																	<div class="post-dropdown-menu" style="width: 160px;">
+																		<a class="post-dropdown-item" href="">Delete post</a>
+																		<a class="post-dropdown-item" href="">Add to bookmarks</a>
+																		<a class="post-dropdown-item" href="">Pin post</a>
+																		<a class="post-dropdown-item" href="">Disable comment</a>
+																	</div>
+																</details>
+															</div>
 														</div>
 														<div class="row">
 															<p>' . $fp->text . '</p>
