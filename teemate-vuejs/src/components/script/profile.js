@@ -2,7 +2,7 @@ export default {
 	name: 'app',
 	data() {
 		return {
-			message: 'Welcome'
+			visible: false,
 		}
-	}
+	},
 }

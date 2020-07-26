@@ -5,12 +5,17 @@
 }
 
 body {
+	line-height: 1.6;
+}
+
+body, button, input {
 	background-color: #121212;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	line-height: 1.5;
+	line-height: 20px;
 	word-wrap: break-word;
-	color: #fff;
+	color: #b3b3b3;
+	text-transform: none;
 }
 
 ul {
@@ -26,6 +31,12 @@ a {
 a:hover {
 	color: #1DB954;
 	outline: none;
+}
+
+hr {
+	height: 0;
+	border: 0;
+	border-top: 1px solid #404040;
 }
 
 /* #1ed760 */
@@ -51,19 +62,26 @@ a:hover {
 /* ---------------------------------------------------- */
 
 .navbar-wrapper {
-	width: 18%;
+	width: 220px;
 	display: flex;
 	flex-shrink: 0;
 	flex-grow: 0;
 	flex-direction: column;
 	background-color: #000;
-	padding-top: 24px;
 }
 
 .navbar-container {
+	padding-top: 24px;
 	position: fixed;
 	user-select: none;
 	cursor: default;
+	width: inherit;
+	height: 100%;
+	
+	display: flex;
+	flex-shrink: 0;
+	flex-grow: 0;
+	flex-direction: column;
 }
 
 .navbar-header {
@@ -86,12 +104,20 @@ a:hover {
 	padding: 0 16px;
 	height: 40px;
 	color: #b3b3b3;
+	outline: none;
 }
 
 .menu-item:focus, .menu-item:hover {
 	text-decoration: none;
 	color: #fff;
-	/* background-color: #282828; */
+	transition-property: color;
+	transition-duration: .2s;
+	transition-timing-function: linear;
+}
+
+.active {
+	background-color: #282828;
+	color: #fff;
 }
 
 /* .menu-item:focus .item-icon, .menu-item:hover .item-icon {
@@ -118,6 +144,20 @@ a:hover {
 
 .header-title {
 	font-size: 34px;
+	font-weight: 500;
+	outline: none;
+}
+
+.header-title > sup {
+	position: relative;
+	font-size: 4pt;
+	top: -1.1em;
+	left: -1.8em;
+	letter-spacing: .8px;
+}
+
+.no-green {
+	color: #fff !important;
 }
 
 /* ---------------------------------------------------- */
@@ -125,7 +165,7 @@ a:hover {
 /* ---------------------------------------------------- */
 
 .content-container {
-	width: 82%;
+	width: calc(100% - 220px);
 }
 
 .header-wrapper {
@@ -138,10 +178,10 @@ a:hover {
 	display: flex;
 	margin: 0 auto;
 	padding: 16px 32px;
-	height: 60px;
+	height: inherit;
 	justify-content: space-between;
 	align-items: center;
-	max-width: calc(100vw - 18%);
+	max-width: calc(100vw - 220px);
 	z-index: 3;
 	width: 100%;
 	background-color: #000; /* #121212 */
@@ -152,8 +192,7 @@ a:hover {
 	white-space: nowrap;
 }
 
-
-.account-tap {
+.account-button {
 	background-color: #000;
 	border-radius: 23px;
 	height: 32px;
@@ -165,10 +204,59 @@ a:hover {
 	cursor: pointer;
 	color: #fff;
 	padding: 2px;
+	outline: none;
 }
 
-.account-tap:hover {
+.account-button:hover, .account-button:focus {
 	background-color: #282828;
+}
+
+.dropdown-menu {
+	position: absolute;
+	right: 0;
+	
+	width: 130px;
+	background-color: #282828;
+	border-radius: 4px;
+	border: 1px solid rgba(0,0,0,.1);
+	box-shadow: 0 4px 4px rgba(0,0,0,.7);
+	top: 100%;
+	margin-top: 8px;
+	z-index: 1003;
+}
+
+.dropdown-menu:focus { 
+	outline: none;
+}
+
+.dropdown-menu > li {
+	border-radius: 4px 4px 0 0;
+}
+
+.dropdown-menu-item {
+	width: 100%;
+	padding: 3px 20px;
+	line-height: 32px;
+	white-space: nowrap;
+	background: none;
+	border: 0;
+	user-select: none;
+	cursor: default;
+	color: #b3b3b3;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	position: relative;
+	outline: none;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: normal;
+}
+
+.dropdown-menu-item:focus, .dropdown-menu-item:hover { 
+	color: #fff;
+	background-color: #333;
+	text-decoration: none;
 }
 
 .account-avatar {
@@ -198,18 +286,11 @@ a:hover {
 
 .dropdown {
 	display: inline-block;
-	margin-right: 6px;
-	margin-left: 8px;
-	
-	display: inline-block;
-	width: 0;
-	height: 0;
+	margin-right: 8px;
+	margin-left: 2px;
+	width: 14px;
+	height: 10px;
 	content: "";
-	border-top-style: solid;
-	border-top-width: 4px;
-	border-right: 4px solid transparent;
-	border-bottom: 0 solid transparent;
-	border-left: 4px solid transparent;
 	color: #fff;
 }
 
@@ -305,6 +386,7 @@ a:hover {
 	border: 0;
 	color: #fff;
 	font-size: 12px;
+	outline: none;
 }
 
 .button:hover {

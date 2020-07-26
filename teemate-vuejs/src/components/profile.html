@@ -4,7 +4,9 @@
 			<div class="navbar-wrapper">
 				<nav class="navbar-container">
 					<div class="navbar-header">
-						<a class="header-title" href="/">TeeMate</a>
+						<a class="header-title" href="/">TeeMate
+							<sup>TM</sup>
+						</a>
 					</div>
 					<ul class="main-nav-ul">
 						<li class="navbar-item">
@@ -50,14 +52,29 @@
 				<div class="header-wrapper">
 					<header class="header-container">
 						<div></div>
-						<div class="account-menu">
-							<button class="account-tap">
+						<div class="account-menu"  v-on:click="visible = !visible">
+							<button class="account-button">
 								<figure class="account-avatar">
 									<img class="account-image" height="28px" width="28px" src="src/assets/asviar.png" alt="">
 								</figure>
 								<span class="account-username">yorrdt</span>
-								<span class="dropdown"></span>
+								<span class="dropdown" v-bind:class="[visible ? 'fas fa-angle-up' : 'fas fa-angle-down']"></span>
 							</button>
+							<ul class="dropdown-menu" v-show="visible">
+								<li>
+									<a class="dropdown-menu-item" href="/" target="_blank">Профиль</a>
+								</li>
+								<li>
+									<a class="dropdown-menu-item" href="/" target="_blank">Настройки</a>
+								</li>
+								<li>
+									<a class="dropdown-menu-item" href="/" target="_blank">Помощь</a>
+								</li>
+								<hr></hr>
+								<li>
+									<a class="dropdown-menu-item" href="/" target="_blank">Выйти</a>
+								</li>
+							</ul>
 						</div>
 						<div class="mobile-navi">
 							<a class="hamburger-wrapper-ref" href="/">
@@ -78,7 +95,7 @@
 								<div class="content">
 									<img class="content-image" src="src/assets/asviar.png" alt="">
 								</div>
-								<button class="button">{{ message }}</button>
+								<button class="button">Button</button>
 							</div>
 						</div>
 					</section>
