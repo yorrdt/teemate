@@ -71,7 +71,7 @@ hr {
 }
 
 .navbar-container {
-	padding-top: 24px;
+	padding-top: 19px;
 	position: fixed;
 	user-select: none;
 	cursor: default;
@@ -85,7 +85,7 @@ hr {
 }
 
 .navbar-header {
-	margin-bottom: 18px;
+	margin-bottom: 24px;
 	padding-left: 24px;
 }
 
@@ -151,8 +151,6 @@ hr {
 .header-title > sup {
 	position: relative;
 	font-size: 4pt;
-	top: -1.1em;
-	left: -1.8em;
 	letter-spacing: .8px;
 }
 
@@ -335,7 +333,7 @@ hr {
 }
 
 .content-spacing {
-	padding: 0 18px;
+	padding: 0 18px 16px;
 	max-width: 1955px;
 }
 
@@ -350,7 +348,7 @@ hr {
 .content-grid {
 	display: grid;
 	grid-gap: 16px;
-	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
 }
 
 .content-image {
@@ -366,7 +364,7 @@ hr {
 	flex-direction: column;
 	width: 100%;
 	background-color: #282828;
-	border-radius: 14px;
+	border-radius: 8px;
 	padding: 16px;
 }
 
