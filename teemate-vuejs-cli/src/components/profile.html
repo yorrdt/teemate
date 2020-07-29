@@ -9,43 +9,57 @@
 					<ul class="navbar-ul">
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
-								<div class="item-icon fas fa-hammer"></div>
+								<div class="item-icon fas fa-hammer">
+									<span class="notif-count">12</span>
+								</div>
 								<span class="text-item">Проекты</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
-								<div class="item-icon fas fa-check"></div>
+								<div class="item-icon fas fa-check">
+									<span class="notif-count">12</span>
+								</div>
 								<span class="text-item">Задачи</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
-								<div class="item-icon fas fa-comment"></div>
+								<div class="item-icon fas fa-comment">
+									<span class="notif-count">12</span>
+								</div>
 								<span class="text-item">Сообщения</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
-								<div class="item-icon fas fa-handshake"></div>
+								<div class="item-icon fas fa-handshake">
+									<span class="notif-count">12</span>
+								</div>
 								<span class="text-item">Тиммейты</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
-								<div class="item-icon fas fa-quote-right"></div>
+								<div class="item-icon fas fa-quote-right">
+									<span class="notif-count">12</span>
+								</div>
 								<span class="text-item">Подписки</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
-								<div class="item-icon fas fa-star"></div>
+								<div class="item-icon fas fa-star">
+									<span class="notif-count">12</span>
+								</div>
 								<span class="text-item">Закладки</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
-								<div class="item-icon fas fa-question"></div>
+								<div class="item-icon fas fa-question">
+									<span class="notif-count">12</span>
+								</div>
 								<span class="text-item">Q&amp;A</span>
 							</a>
 						</li>
@@ -55,16 +69,31 @@
 			<div class="content-container">
 				<div class="header-wrapper">
 					<header class="header-container">
-						<div class="header-item"></div>
+						<div class="header-item">
+							<nav class="header-select">
+								<ul class="select-ul">
+									<li class="active">
+										<a class="select-item" href="/">Что-то</a>
+									</li>
+									<li>
+										<a class="select-item" href="/">Как-то</a>
+									</li>
+									<li>
+										<a class="select-item" href="/">Где-то</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
 						<div class="header-right">
 							<div class="notif-item">
-								<a class="fas fa-bell" href="/"></a>
+								<a class="fas fa-bell" href="/"><span class="notif-point"></span></a>
 							</div>
 							<div class="account-menu"  v-on:click="visible = !visible" v-on-clickaway="away">
 								<button class="account-button">
 									<figure class="account-avatar">
 										<img class="account-image" height="28px" width="28px" src="../assets/asviar.png" alt="">
 									</figure>
+									<span class="account-username">yorrdt</span>
 									<span class="dropdown" v-bind:class="[visible ? 'fas fa-angle-up' : 'fas fa-angle-down']"></span>
 								</button>
 								<ul class="dropdown-menu" v-show="visible">

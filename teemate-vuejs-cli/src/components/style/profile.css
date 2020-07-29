@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-	color: #1DB954;
+	/* color: #1DB954; */
 	outline: none;
 }
 
@@ -115,16 +115,26 @@ hr {
 	transition-timing-function: linear;
 }
 
-.active {
-	background-color: #282828;
+.notif-count {
+	display: none;
+	position: absolute;
+	left: 10px;
+	bottom: -6px;
+	z-index: 15;
+	min-width: 12px;
+	padding: 1px 4px;
+	text-align: center;
+	font-size: 9px;
+	line-height: 12px;
 	color: #fff;
+	border: 2px solid #000;
+	border-radius: 8px;
+	background-color: #ff1122;
+	font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* .menu-item:focus .item-icon, .menu-item:hover .item-icon {
-	color: #1DB954;
-} */
-
 .item-icon {
+	position: relative;
 	margin-right: 16px;
 	height: 24px;
 	width: 24px;
@@ -185,6 +195,42 @@ hr {
 	background-color: #000; /* #121212 */
 }
 
+.header-item {
+	display: flex;
+	align-items: center;
+}
+
+.header-select {
+	display: block;
+	cursor: pointer;
+	outline: none;
+}
+
+.select-ul {
+	display: flex;
+	align-items: center;
+}
+
+.select-ul > li {
+	margin-right: 8px;
+	padding: 6px 16px;
+}
+
+.select-item {
+	color: #fff;
+	position: relative;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+.active {
+	background-color: #333;
+	border-radius: 4px;
+}
+
 .header-right {
 	display: flex;
 	justify-content: space-between;
@@ -197,6 +243,23 @@ hr {
 	width: 18px;
 	font-size: 1.2em;
 	cursor: pointer;
+	position: relative;
+}
+
+.notif-item > a:hover, .notif-item > a:focus {
+	color: hsla(0, 0%, 100%, .7);
+}
+
+.notif-point {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 15;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: red;
 }
 
 .account-menu {
@@ -283,10 +346,23 @@ hr {
 	height: 28px;
 }
 
+.account-username {
+	margin-left: 6px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 110px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
 .dropdown {
 	display: inline-block;
-	margin-right: 8px;
-	margin-left: 2px;
+	margin-right: 6px;
+	margin-left: 6px;
 	width: 14px;
 	height: 10px;
 	content: "";
