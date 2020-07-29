@@ -1,4 +1,4 @@
-# TeeMate
+# TeeMate Vue-Cli
 
 ## Project setup
 ```
