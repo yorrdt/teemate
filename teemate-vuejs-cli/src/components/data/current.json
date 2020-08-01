@@ -1,0 +1,64 @@
+[
+	{
+		"language": [
+			{
+				"ru": "Проекты",
+				"en": "Projects"
+			}
+		],
+		"count": 1
+	}, 
+	{
+		"language": [
+			{
+				"ru": "Задачи",
+				"en": "Tasks"
+			}
+		],
+		"count": 48
+	},
+	{
+		"language": [
+			{
+				"ru": "Сообщения",
+				"en": "Messages"
+			}
+		],
+		"count": 6
+	}, 
+	{
+		"language": [
+			{
+				"ru": "Тиммейты",
+				"en": "Teammates"
+			}
+		],
+		"count": 3
+	},
+	{
+		"language": [
+			{
+				"ru": "Подписки",
+				"en": "Subscriptions"
+			}
+		],
+		"count": 35
+	}, 
+	{
+		"language": [
+			{
+				"ru": "Закладки",
+				"en": "Bookmarks"
+			}
+		],
+		"count": "99+"
+	},
+	{
+		"language": [
+			{
+				"en": "Q&A"
+			}
+		],
+		"count": 12
+	}
+]

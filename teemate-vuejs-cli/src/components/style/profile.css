@@ -29,7 +29,6 @@ a {
 }
 
 a:hover {
-	/* color: #1DB954; */
 	outline: none;
 }
 
@@ -39,7 +38,12 @@ hr {
 	border-top: 1px solid #404040;
 }
 
-/* #1ed760 */
+/* ---------------------------------------------------- */
+
+@media screen and (max-width: 880px) {
+	
+}
+
 
 /* ---------------------------------------------------- */
 /* ----------------- MAIN_CONTAINER ------------------- */
@@ -48,151 +52,44 @@ hr {
 .main-wrapper {
 	display: flex;
 	flex: auto;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .main-container {
 	display: flex;
 	flex: auto;
-	flex-direction: row;
-}
-
-/* ---------------------------------------------------- */
-/* ----------------- NAVBAR_CONTAINER ----------------- */
-/* ---------------------------------------------------- */
-
-.navbar-wrapper {
-	width: 220px;
-	display: flex;
-	flex-shrink: 0;
-	flex-grow: 0;
 	flex-direction: column;
-	background-color: #000;
-}
-
-.navbar-container {
-	padding-top: 19px;
-	position: fixed;
-	user-select: none;
-	cursor: default;
-	width: inherit;
-	height: 100%;
-	
-	display: flex;
-	flex-shrink: 0;
-	flex-grow: 0;
-	flex-direction: column;
-}
-
-.navbar-header {
-	margin-bottom: 24px;
-	padding-left: 24px;
-}
-
-.navbar-item {
-	padding: 0 8px;
-}
-
-.navbar-item:focus { 
-	outline: none;
-}
-
-.menu-item {
-	display: flex;
-	align-items: center;
-	border-radius: 4px;
-	padding: 0 16px;
-	height: 40px;
-	color: #b3b3b3;
-	outline: none;
-}
-
-.menu-item:focus, .menu-item:hover {
-	text-decoration: none;
-	color: #fff;
-	transition-property: color;
-	transition-duration: .2s;
-	transition-timing-function: linear;
-}
-
-.notif-count {
-	display: none;
-	position: absolute;
-	left: 10px;
-	bottom: -6px;
-	z-index: 15;
-	min-width: 12px;
-	padding: 1px 4px;
-	text-align: center;
-	font-size: 9px;
-	line-height: 12px;
-	color: #fff;
-	border: 2px solid #000;
-	border-radius: 8px;
-	background-color: #ff1122;
-	font-family: Roboto, Helvetica, Arial, sans-serif;
-}
-
-.item-icon {
-	position: relative;
-	margin-right: 16px;
-	height: 24px;
-	width: 24px;
-	font-size: 1.5em;
-}
-
-.text-item {
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 16px;
-	letter-spacing: normal;
-	text-transform: none;
-}
-
-.header-title {
-	font-size: 34px;
-	font-weight: 500;
-	outline: none;
-}
-
-.header-title > sup {
-	position: relative;
-	font-size: 4pt;
-	letter-spacing: .8px;
-}
-
-.no-green {
-	color: #fff !important;
 }
 
 /* ---------------------------------------------------- */
 /* --------------------- HEADER ----------------------- */
 /* ---------------------------------------------------- */
 
-.content-container {
-	width: calc(100% - 220px);
-}
-
 .header-wrapper {
 	display: flex;
-	height: 60px;
+	height: 48px;
+	width: 100%;
+	background-color: #000; /* #121212 */
 }
 
 .header-container {
-	position: fixed;
-	display: flex;
 	margin: 0 auto;
-	padding: 16px 32px;
-	height: inherit;
+	max-width: 1024px;
+	
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: calc(100vw - 220px);
-	z-index: 3;
-	width: 100%;
-	background-color: #000; /* #121212 */
+	flex-direction: row;
+	
+	padding: 8px 16px;
+	height: inherit;
+	width: inherit;
+	z-index: 16;
+}
+
+.navbar-header {
+	display: flex;
+	align-items: center;
 }
 
 .header-item {
@@ -251,7 +148,7 @@ hr {
 }
 
 .notif-point {
-	display: none;
+	/* display: none; */
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -367,10 +264,14 @@ hr {
 	height: 10px;
 	content: "";
 	color: #fff;
+	/* TO DO */
+	transform: rotate(0deg);
+	transition: 0.3s;
 }
 
-.dropdown::before {
-
+.account-menu:active .account-button > .dropdown, .fa-angle-down::before {
+	transform: rotate(180deg);
+	margin-top: 5px;
 }
 
 /* --------------------------------------------------------------- */
@@ -401,17 +302,120 @@ hr {
 	margin: 6px 0px;
 }
 
+
+/* ---------------------------------------------------- */
+/* ----------------- NAVBAR_CONTAINER ----------------- */
+/* ---------------------------------------------------- */
+
+.content-container {
+	display: flex;
+	flex: auto;
+	flex-direction: row;
+	margin: 0 auto;
+	max-width: 1024px;
+}
+
+.navbar-wrapper {
+	width: 18%;
+	display: flex;
+	flex-shrink: 0;
+	flex-grow: 0;
+	flex-direction: column;
+}
+
+.navbar-container {
+	display: flex;
+	flex-shrink: 0;
+	flex-grow: 0;
+	flex-direction: column;
+	
+	padding-top: 20px;
+	user-select: none;
+	cursor: default;
+	width: 100%;
+}
+
+.navbar-item:focus { 
+	outline: none;
+}
+
+.menu-item {
+	display: flex;
+	align-items: center;
+	border-radius: 4px;
+	padding: 0 16px;
+	height: 40px;
+	color: #b3b3b3;
+	outline: none;
+}
+
+.menu-item:focus, .menu-item:hover {
+	text-decoration: none;
+	color: #fff;
+	transition-property: color;
+	transition-duration: .2s;
+	transition-timing-function: linear;
+}
+
+.notif-count {
+	/* display: none; */
+	position: absolute;
+	left: 10px;
+	bottom: -6px;
+	z-index: 15;
+	min-width: 12px;
+	padding: 1px 4px;
+	text-align: center;
+	font-size: 9px;
+	line-height: 12px;
+	color: #fff;
+	border: 2px solid #222;
+	border-radius: 12px;
+	background-color: #ff1122;
+	font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.item-icon {
+	position: relative;
+	margin-right: 16px;
+	height: 24px;
+	width: 24px;
+	font-size: 1.5em;
+}
+
+.text-item {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+.header-title {
+	font-size: 26px;
+	font-weight: 500;
+	outline: none;
+}
+
+.header-title > sup {
+	position: relative;
+	font-size: 4pt;
+	letter-spacing: .8px;
+}
+
 /* --------------------------------------------------- */
 /* --------------- SECTION_CONTAINER ----------------- */
 /* --------------------------------------------------- */
 
 .section-wrapper {
-	
+	width: 82%;
 }
 
 .content-spacing {
-	padding: 0 18px 16px;
-	max-width: 1955px;
+	padding: 0 16px 16px;
 }
 
 .content-header {
@@ -462,19 +466,10 @@ hr {
 	color: #fff;
 	font-size: 12px;
 	outline: none;
+	cursor: pointer;
 }
 
-.button:hover {
+.button:hover, .button:focus {
 	background-color: #1ed760;
+	outline: none;
 }
-
-/* --------------------------------------------------- */
-/* ---------------- ASIDE_CONTAINER ------------------ */
-/* --------------------------------------------------- */
-
-
-/* .aside-wrapper {
-	padding-top: 80px;
-	width: 24%;
-} */
-
