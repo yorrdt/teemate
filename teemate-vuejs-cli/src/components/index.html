@@ -1,4 +1,4 @@
-<div id="app">
+<div id="index">
 	<div class="main-wrapper">
 		<main class="main-container">
 			<div class="header-wrapper">
@@ -9,11 +9,12 @@
 					<nav class="header-nav">
 						<ul class="nav-ul">
 							<li class="header-item">
-								<a class="signin-item" href="profile.html">Войти</a>
+								<router-link to="/profile" class="signin-item">Войти</router-link>
 							</li>
 							<li class="header-item">
-								<a class="signup-item" href="/">Зарегистрироваться</a>
+								<router-link to="" class="signup-item">Зарегистрироваться</router-link>
 							</li>
+							<router-view/>
 						</ul>
 					</nav>
 					<div class="mobile-navi">

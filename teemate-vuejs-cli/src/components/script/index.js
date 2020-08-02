@@ -1,5 +1,5 @@
 export default {
-	name: 'app',
+	name: 'index',
 	data: {
 		
 	},

@@ -1,27 +1,14 @@
-<div id="app">
+<div id="profile">
 	<div class="main-wrapper">
 		<main class="main-container">
 			<div class="header-wrapper">
 				<header class="header-container">
 					<div class="navbar-header">
-						<img class="account-image" height="32px" width="32px" src="../assets/asviar.png" alt="">
-						<a class="header-title" href="/">TeeMate<sup>TM</sup></a>
+						<a class="header-title" href="/">
+							<img class="account-image" height="32px" width="32px" src="../assets/logo.png" alt="">
+							<span>TeeMate<sup>TM</sup></span>
+						</a>
 					</div>
-					<!-- <div class="header-item">
-						<nav class="header-select">
-							<ul class="select-ul">
-								<li class="active">
-									<a class="select-item" href="/">Что-то</a>
-								</li>
-								<li>
-									<a class="select-item" href="/">Как-то</a>
-								</li>
-								<li>
-									<a class="select-item" href="/">Где-то</a>
-								</li>
-							</ul>
-						</nav>
-					</div> -->
 					<div class="header-right">
 						<div class="notif-item">
 							<a class="fas fa-bell" href="/"><span class="notif-point"></span></a>
@@ -29,24 +16,24 @@
 						<div class="account-menu"  v-on:click="visible = !visible" v-on-clickaway="away">
 							<button class="account-button">
 								<figure class="account-avatar">
-									<img class="account-image" height="28px" width="28px" src="../assets/asviar.png" alt="">
+									<img class="account-image" height="28px" width="28px" src="../assets/logo.png" alt="">
 								</figure>
 								<span class="account-username">yorrdt</span>
-								<span class="dropdown" v-bind:class="[visible ? 'fas fa-angle-up' : 'fas fa-angle-down']"></span> 
+								<span class="dropdown" :class="[visible ? 'fas fa-angle-up' : 'fas fa-angle-down']"></span> 
 							</button>
 							<ul class="dropdown-menu" v-show="visible">
 								<li>
-									<a class="dropdown-menu-item" href="/" target="_blank">Профиль</a>
+									<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[0].ru }}</a>
 								</li>
 								<li>
-									<a class="dropdown-menu-item" href="/" target="_blank">Настройки</a>
+									<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[1].ru }}</a>
 								</li>
 								<li>
-									<a class="dropdown-menu-item" href="/" target="_blank">Помощь</a>
+									<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[2].ru }}</a>
 								</li>
 								<hr></hr>
 								<li>
-									<a class="dropdown-menu-item" href="/" target="_blank">Выйти</a>
+									<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[3].ru }}</a>
 								</li>
 							</ul>
 						</div>
@@ -71,57 +58,57 @@
 							<li class="navbar-item">
 								<a class="menu-item" href="/">
 									<div class="item-icon fas fa-hammer">
-										<span class="notif-count">{{ jsonData[0].count }}</span>
+										<span class="notif-count">{{ jsonData[0].navbar_menu[0].count }}</span>
 									</div>
-									<span class="text-item">{{ jsonData[0].language[0].ru }}</span>
+									<span class="text-item">{{ jsonData[0].navbar_menu[0].ru }}</span>
 								</a>
 							</li>
 							<li class="navbar-item">
 								<a class="menu-item" href="/">
 									<div class="item-icon fas fa-check">
-										<span class="notif-count">{{ jsonData[1].count }}</span>
+										<span class="notif-count">{{ jsonData[0].navbar_menu[1].count }}</span>
 									</div>
-									<span class="text-item">{{ jsonData[1].language[0].ru }}</span>
+									<span class="text-item">{{ jsonData[0].navbar_menu[1].ru }}</span>
 								</a>
 							</li>
 							<li class="navbar-item">
 								<a class="menu-item" href="/">
 									<div class="item-icon fas fa-comment">
-										<span class="notif-count">{{ jsonData[2].count }}</span>
+										<span class="notif-count">{{ jsonData[0].navbar_menu[2].count }}</span>
 									</div>
-									<span class="text-item">{{ jsonData[2].language[0].ru }}</span>
+									<span class="text-item">{{ jsonData[0].navbar_menu[2].ru }}</span>
 								</a>
 							</li>
 							<li class="navbar-item">
 								<a class="menu-item" href="/">
 									<div class="item-icon fas fa-handshake">
-										<span class="notif-count">{{ jsonData[3].count }}</span>
+										<span class="notif-count">{{ jsonData[0].navbar_menu[3].count }}</span>
 									</div>
-									<span class="text-item">{{ jsonData[3].language[0].ru }}</span>
+									<span class="text-item">{{ jsonData[0].navbar_menu[3].ru }}</span>
 								</a>
 							</li>
 							<li class="navbar-item">
 								<a class="menu-item" href="/">
 									<div class="item-icon fas fa-quote-right">
-										<span class="notif-count">{{ jsonData[4].count }}</span>
+										<span class="notif-count">{{ jsonData[0].navbar_menu[4].count }}</span>
 									</div>
-									<span class="text-item">{{ jsonData[4].language[0].ru }}</span>
+									<span class="text-item">{{ jsonData[0].navbar_menu[4].ru }}</span>
 								</a>
 							</li>
 							<li class="navbar-item">
 								<a class="menu-item" href="/">
 									<div class="item-icon fas fa-star">
-										<span class="notif-count">{{ jsonData[5].count }}</span>
+										<span class="notif-count">{{ jsonData[0].navbar_menu[5].count }}</span>
 									</div>
-									<span class="text-item">{{ jsonData[5].language[0].ru }}</span>
+									<span class="text-item">{{ jsonData[0].navbar_menu[5].ru }}</span>
 								</a>
 							</li>
 							<li class="navbar-item">
 								<a class="menu-item" href="/">
 									<div class="item-icon fas fa-question">
-										<span class="notif-count">{{ jsonData[6].count }}</span>
+										<span class="notif-count">{{ jsonData[0].navbar_menu[6].count }}</span>
 									</div>
-									<span class="text-item">{{ jsonData[6].language[0].en }}</span>
+									<span class="text-item">{{ jsonData[0].navbar_menu[6].en }}</span>
 								</a>
 							</li>
 						</ul>
@@ -133,9 +120,9 @@
 						<div class="content-grid">
 							<div class="container" v-for="n in 52">
 								<div class="content">
-									<img class="content-image" src="../assets/asviar.png" alt="">
+									<img class="content-image" src="../assets/logo.png" alt="">
 								</div>
-								<button class="button">Button</button>
+								<button class="button" src="/">Button</button>
 							</div>
 						</div>
 					</section>

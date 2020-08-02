@@ -1,5 +1,5 @@
 import { mixin as clickaway } from 'vue-clickaway';
-import json from '../data/current.json';
+import json from '../data/menu.json';
 
 export default {
 	name: 'account-menu',

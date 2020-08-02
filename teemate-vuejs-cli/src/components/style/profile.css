@@ -92,42 +92,6 @@ hr {
 	align-items: center;
 }
 
-.header-item {
-	display: flex;
-	align-items: center;
-}
-
-.header-select {
-	display: block;
-	cursor: pointer;
-	outline: none;
-}
-
-.select-ul {
-	display: flex;
-	align-items: center;
-}
-
-.select-ul > li {
-	margin-right: 8px;
-	padding: 6px 16px;
-}
-
-.select-item {
-	color: #fff;
-	position: relative;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 16px;
-	letter-spacing: normal;
-	text-transform: none;
-}
-
-.active {
-	background-color: #333;
-	border-radius: 4px;
-}
-
 .header-right {
 	display: flex;
 	justify-content: space-between;
@@ -264,14 +228,6 @@ hr {
 	height: 10px;
 	content: "";
 	color: #fff;
-	/* TO DO */
-	transform: rotate(0deg);
-	transition: 0.3s;
-}
-
-.account-menu:active .account-button > .dropdown, .fa-angle-down::before {
-	transform: rotate(180deg);
-	margin-top: 5px;
 }
 
 /* --------------------------------------------------------------- */
@@ -395,12 +351,17 @@ hr {
 }
 
 .header-title {
-	font-size: 26px;
-	font-weight: 500;
+	display: flex;
+	align-items: center;
 	outline: none;
 }
 
-.header-title > sup {
+.header-title span {
+	font-size: 26px;
+	font-weight: 500;
+}
+
+.header-title > span > sup {
 	position: relative;
 	font-size: 4pt;
 	letter-spacing: .8px;
