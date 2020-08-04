@@ -44,10 +44,6 @@ hr {
 
 /* ---------------------------------------------------- */
 
-@media screen and (max-width: 880px) {
-	
-}
-
 
 /* ---------------------------------------------------- */
 /* ----------------- MAIN_CONTAINER ------------------- */
@@ -271,7 +267,7 @@ hr {
 }
 
 .navbar-wrapper {
-	width: 220px;
+	width: 200px;
 	display: flex;
 	flex-shrink: 0;
 	flex-grow: 0;
@@ -291,7 +287,7 @@ hr {
 }
 
 .navbar-item {
-	padding: 0 8px;
+	padding: 0 16px;
 }
 
 .navbar-item:focus, .navbar-item:hover { 
@@ -375,7 +371,7 @@ hr {
 /* --------------------------------------------------- */
 
 .section-wrapper {
-	width: calc(100% - 220px);
+	width: calc(100% - 200px);
 }
 
 .content-spacing {
