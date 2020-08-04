@@ -1,56 +1,56 @@
-<div id="profile">
-	<div class="main-wrapper">
-		<main class="main-container">
-			<div class="header-wrapper">
-				<header class="header-container">
-					<div class="navbar-header">
-						<a class="header-title" href="/">
-							<img class="account-image" height="32px" width="32px" src="../assets/logo.png" alt="">
-							<span>TeeMate<sup>TM</sup></span>
-						</a>
+<div id="app">
+	<div class="main-container">
+		<div class="header-wrapper">
+			<header class="header-container">
+				<div class="navbar-header">
+					<a class="header-title" href="/">
+						<img class="account-image" height="32px" width="32px" src="../assets/logo.png" alt="">
+						<span>TeeMate<sup>TM</sup></span>
+					</a>
+				</div>
+				<div class="header-right">
+					<div class="notif-item">
+						<a class="fas fa-bell" href="/"><span class="notif-point"></span></a>
 					</div>
-					<div class="header-right">
-						<div class="notif-item">
-							<a class="fas fa-bell" href="/"><span class="notif-point"></span></a>
+					<div class="account-menu"  v-on:click="visible = !visible" v-on-clickaway="away">
+						<button class="account-button">
+							<figure class="account-avatar">
+								<img class="account-image" height="28px" width="28px" src="../assets/logo.png" alt="">
+							</figure>
+							<span class="account-username">yorrdt</span>
+							<span class="dropdown" :class="[visible ? 'fas fa-angle-up' : 'fas fa-angle-down']"></span> 
+						</button>
+						<ul class="dropdown-menu" v-show="visible">
+							<li>
+								<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[0].ru }}</a>
+							</li>
+							<li>
+								<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[1].ru }}</a>
+							</li>
+							<li>
+								<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[2].ru }}</a>
+							</li>
+							<hr></hr>
+							<li>
+								<router-link to="/" class="dropdown-menu-item">{{ jsonData[0].dropdown_menu[3].ru }}</router-link>
+							</li>
+						</ul>
+					</div>
+					<div></div>
+				</div>
+				<div class="mobile-navi">
+					<a class="hamburger-wrapper-ref" href="/">
+						<div class="hamburger">
+							<div class="ham1"></div>
+							<div class="ham2"></div>
+							<div class="ham3"></div>
 						</div>
-						<div class="account-menu"  v-on:click="visible = !visible" v-on-clickaway="away">
-							<button class="account-button">
-								<figure class="account-avatar">
-									<img class="account-image" height="28px" width="28px" src="../assets/logo.png" alt="">
-								</figure>
-								<span class="account-username">yorrdt</span>
-								<span class="dropdown" :class="[visible ? 'fas fa-angle-up' : 'fas fa-angle-down']"></span> 
-							</button>
-							<ul class="dropdown-menu" v-show="visible">
-								<li>
-									<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[0].ru }}</a>
-								</li>
-								<li>
-									<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[1].ru }}</a>
-								</li>
-								<li>
-									<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[2].ru }}</a>
-								</li>
-								<hr></hr>
-								<li>
-									<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[3].ru }}</a>
-								</li>
-							</ul>
-						</div>
-						<div></div>
-					</div>
-					<div class="mobile-navi">
-						<a class="hamburger-wrapper-ref" href="/">
-							<div class="hamburger">
-								<div class="ham1"></div>
-								<div class="ham2"></div>
-								<div class="ham3"></div>
-							</div>
-						</a>
-					</div>
-				</header>
-			</div>
-			<div class="content-container">
+					</a>
+				</div>
+			</header>
+		</div>
+		<div class="content-wrapper">
+			<main class="content-container">
 				<div></div>
 				<div class="navbar-wrapper">
 					<nav class="navbar-container">
@@ -127,7 +127,7 @@
 						</div>
 					</section>
 				</div>
-			</div>
-		</main>
+			</main>
+		</div>
 	</div>
 </div>
