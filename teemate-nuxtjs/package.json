@@ -1,0 +1,13 @@
+{
+	"name": "TeeMate",
+	"version": "1.0.0",
+	"description": "first nuxtjs teemate project",
+	"author": "Egor Moroz",
+	"scripts": {
+		"dev": "nuxt"
+	},
+	"dependencies": {
+		"nuxt": "^2.14.1",
+		"vue-clickaway": "^2.2.2"
+	}
+}

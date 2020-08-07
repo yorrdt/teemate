@@ -1,19 +1,13 @@
-# TeeMate Vue-Cli
+# TeeMate Nuxt.js
 
 ## Project setup
 ```
-npm install
+$ cd <project-name>
+$ npm install
+$ npm run dev
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
+The application is now running on http://localhost:3000
 
 ## TeeMate(using VueJS) Illustrations
 

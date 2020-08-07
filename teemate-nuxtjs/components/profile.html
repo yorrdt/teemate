@@ -1,0 +1,147 @@
+<div class="main-container profile">
+	<div class="header-wrapper">
+		<header class="header-container">
+			<div class="navbar-header">
+				<a class="header-title" href="/">
+					<img class="account-image" height="32px" width="32px" src="../assets/logo.png" alt="">
+					<span>TeeMate<sup>TM</sup></span>
+				</a>
+			</div>
+			<div class="header-right">
+				<div class="notif-item">
+					<a class="fas fa-bell" href="/"><span class="notif-point"></span></a>
+				</div>
+				<div class="account-menu" v-on:click="visible = !visible" v-on-clickaway="away">
+					<button class="account-button">
+						<figure class="account-avatar">
+							<img class="account-image" height="28px" width="28px" src="../assets/logo.png" alt="">
+						</figure>
+						<span class="account-username">yorrdt</span>
+						<span class="dropdown" :class="[visible ? 'fas fa-angle-up' : 'fas fa-angle-down']"></span> 
+					</button>
+					<ul class="dropdown-menu" v-show="visible">
+						<li>
+							<a class="dropdown-menu-item" href="/" target="_blank">Профиль</a>
+						</li>
+						<li>
+							<a class="dropdown-menu-item" href="/" target="_blank">Настройки</a>
+						</li>
+						<li>
+							<a class="dropdown-menu-item" href="/" target="_blank">Помощь</a>
+						</li>
+						<hr></hr>
+						<li>
+							<a class="dropdown-menu-item">Выйти</a>
+						</li>
+					</ul>
+				</div>
+				<div></div>
+			</div>
+			<div class="mobile-navi">
+				<a class="hamburger-wrapper-ref" href="/">
+					<div class="hamburger">
+						<div class="ham1"></div>
+						<div class="ham2"></div>
+						<div class="ham3"></div>
+					</div>
+				</a>
+			</div>
+		</header>
+	</div>
+	<div class="content-wrapper">
+		<main class="content-container">
+			<div></div>
+			<div class="navbar-wrapper">
+				<nav class="navbar-container">
+					<ul class="navbar-ul">
+						<li class="navbar-item">
+							<a class="menu-item" href="/">
+								<div class="item-icon fas fa-hammer">
+									<span class="notif-count">1</span>
+								</div>
+								<span class="text-item">Проекты</span>
+							</a>
+						</li>
+						<li class="navbar-item">
+							<a class="menu-item" href="/">
+								<div class="item-icon fas fa-check">
+									<span class="notif-count">48</span>
+								</div>
+								<span class="text-item">Задачи</span>
+							</a>
+						</li>
+						<li class="navbar-item">
+							<a class="menu-item" href="/">
+								<div class="item-icon fas fa-comment">
+									<span class="notif-count">6</span>
+								</div>
+								<span class="text-item">Сообщения</span>
+							</a>
+						</li>
+						<li class="navbar-item">
+							<a class="menu-item" href="/">
+								<div class="item-icon fas fa-handshake">
+									<span class="notif-count">3</span>
+								</div>
+								<span class="text-item">Тиммейты</span>
+							</a>
+						</li>
+						<li class="navbar-item">
+							<a class="menu-item" href="/">
+								<div class="item-icon fas fa-quote-right">
+									<span class="notif-count">35</span>
+								</div>
+								<span class="text-item">Подписки</span>
+							</a>
+						</li>
+						<li class="navbar-item">
+							<a class="menu-item" href="/">
+								<div class="item-icon fas fa-star">
+									<span class="notif-count">99+</span>
+								</div>
+								<span class="text-item">Закладки</span>
+							</a>
+						</li>
+						<li class="navbar-item">
+							<a class="menu-item" href="/">
+								<div class="item-icon fas fa-question">
+									<span class="notif-count">12</span>
+								</div>
+								<span class="text-item">Q&amp;A</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="section-wrapper">
+				<section class="content-spacing">
+					<h1 class="content-header">Header</h1>
+					<div class="content-grid">
+						<div class="container" v-for="n in 54">
+							<div class="content">
+								<img class="content-image" src="../assets/logo.png" alt="">
+							</div>
+							<button class="button" src="/">Button</button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
+	<div class="footer-wrapper">
+		<footer class="footer-container">
+			<ul>
+				<li></li>
+				<li></li>
+				<li>
+					<div class="footer-ico header-title">
+						<img class="account-image" height="32px" width="32px" src="../assets/logo.png" alt="">
+						<span>TeeMate<sup>TM</sup></span>
+					</div>
+				</li>
+				<li></li>
+				<li></li>
+			</ul>
+		</footer>
+	</div>
+</div>
