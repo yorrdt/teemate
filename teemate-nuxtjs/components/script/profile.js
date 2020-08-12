@@ -1,5 +1,5 @@
 import { mixin as clickaway } from 'vue-clickaway';
-/* import json from '../data/menu.json'; */
+import json from '../json/menu.json';
 
 export default {
 	name: 'account-menu',
@@ -7,7 +7,8 @@ export default {
 	data() {
 		return {
 			visible: false,
-			/* jsonData: json, */
+			jsonData: json,
+			private: true,
 		}
 	},
 	methods: {

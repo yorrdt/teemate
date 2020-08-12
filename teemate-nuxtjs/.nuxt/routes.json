@@ -1,8 +1,14 @@
 [
   {
+    "name": "profile",
+    "path": "/profile",
+    "component": "C:\\\\localhost\\\\teemate-nuxtjs\\\\pages\\\\profile.vue",
+    "chunkName": "pages/profile"
+  },
+  {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\localhost\\\\tm-nuxtjs\\\\pages\\\\index.vue",
+    "component": "C:\\\\localhost\\\\teemate-nuxtjs\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   }
 ]

@@ -1,5 +1,8 @@
 <div class="main-container profile">
 	<div class="header-wrapper">
+		<span class="progress-bar">
+			<span class="progress-item" style="width: 0%;"></span>
+		</span>
 		<header class="header-container">
 			<div class="navbar-header">
 				<a class="header-title" href="/">
@@ -21,17 +24,17 @@
 					</button>
 					<ul class="dropdown-menu" v-show="visible">
 						<li>
-							<a class="dropdown-menu-item" href="/" target="_blank">Профиль</a>
+							<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[0].ru }}</a>
 						</li>
 						<li>
-							<a class="dropdown-menu-item" href="/" target="_blank">Настройки</a>
+							<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[1].ru }}</a>
 						</li>
 						<li>
-							<a class="dropdown-menu-item" href="/" target="_blank">Помощь</a>
+							<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[2].ru }}</a>
 						</li>
 						<hr></hr>
 						<li>
-							<a class="dropdown-menu-item">Выйти</a>
+							<a class="dropdown-menu-item" href="/" target="_blank">{{ jsonData[0].dropdown_menu[3].ru }}</a>
 						</li>
 					</ul>
 				</div>
@@ -50,64 +53,63 @@
 	</div>
 	<div class="content-wrapper">
 		<main class="content-container">
-			<div></div>
 			<div class="navbar-wrapper">
 				<nav class="navbar-container">
 					<ul class="navbar-ul">
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
 								<div class="item-icon fas fa-hammer">
-									<span class="notif-count">1</span>
+									<span class="notif-count">{{ jsonData[0].navbar_menu[0].count }}</span>
 								</div>
-								<span class="text-item">Проекты</span>
+								<span class="text-item">{{ jsonData[0].navbar_menu[0].ru }}</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
 								<div class="item-icon fas fa-check">
-									<span class="notif-count">48</span>
+									<span class="notif-count">{{ jsonData[0].navbar_menu[1].count }}</span>
 								</div>
-								<span class="text-item">Задачи</span>
+								<span class="text-item">{{ jsonData[0].navbar_menu[1].ru }}</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
 								<div class="item-icon fas fa-comment">
-									<span class="notif-count">6</span>
+									<span class="notif-count">{{ jsonData[0].navbar_menu[2].count }}</span>
 								</div>
-								<span class="text-item">Сообщения</span>
+								<span class="text-item">{{ jsonData[0].navbar_menu[2].ru }}</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
 								<div class="item-icon fas fa-handshake">
-									<span class="notif-count">3</span>
+									<span class="notif-count">{{ jsonData[0].navbar_menu[3].count }}</span>
 								</div>
-								<span class="text-item">Тиммейты</span>
+								<span class="text-item">{{ jsonData[0].navbar_menu[3].ru }}</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
 								<div class="item-icon fas fa-quote-right">
-									<span class="notif-count">35</span>
+									<span class="notif-count">{{ jsonData[0].navbar_menu[4].count }}</span>
 								</div>
-								<span class="text-item">Подписки</span>
+								<span class="text-item">{{ jsonData[0].navbar_menu[4].ru }}</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
 								<div class="item-icon fas fa-star">
-									<span class="notif-count">99+</span>
+									<span class="notif-count">{{ jsonData[0].navbar_menu[5].count }}</span>
 								</div>
-								<span class="text-item">Закладки</span>
+								<span class="text-item">{{ jsonData[0].navbar_menu[5].ru }}</span>
 							</a>
 						</li>
 						<li class="navbar-item">
 							<a class="menu-item" href="/">
 								<div class="item-icon fas fa-question">
-									<span class="notif-count">12</span>
+									<span class="notif-count">{{ jsonData[0].navbar_menu[6].count }}</span>
 								</div>
-								<span class="text-item">Q&amp;A</span>
+								<span class="text-item">{{ jsonData[0].navbar_menu[6].en }}</span>
 							</a>
 						</li>
 					</ul>
@@ -115,14 +117,54 @@
 			</div>
 			<div class="section-wrapper">
 				<section class="content-spacing">
-					<h1 class="content-header">Header</h1>
-					<div class="content-grid">
-						<div class="container" v-for="n in 54">
-							<div class="content">
-								<img class="content-image" src="../assets/logo.png" alt="">
-							</div>
-							<button class="button" src="/">Button</button>
+					<div class="content-header">
+						<div class="proj-content-header">
+							<h2 class="proj-content-header-item">{{ jsonData[0].navbar_menu[0].ru }}</h2>
+							<span class="proj-content-header-count">{{ jsonData[0].navbar_menu[0].count }}</span>
 						</div>
+						<nav class="content-navbar">
+							<ul>
+								<li class="content-navbar-item">
+									<div class="content-navbar-search">
+										<input class="form-search" type="text" value="" placeholder="Поиск...">
+										<button class="content-navbar-button">
+											<span class="button-icon fas fa-search"></span>
+										</button>
+									</div>
+								</li>
+								<li class="content-navbar-item">
+									<button class="content-navbar-button">
+										<span class="button-icon fas fa-trash"></span>
+									</button>
+								</li>
+								<li class="content-navbar-item">
+									<button class="content-navbar-button">
+										<span class="button-icon fas fa-plus"></span>
+									</button>
+								</li>
+								<li class="content-navbar-item">
+									<button class="content-navbar-button">
+										<span class="button-icon fas fa-ellipsis-v"></span>
+									</button>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="main-content">
+						<ol class="content-grid">
+							<li class="grid-container" v-for="n in jsonData[0].navbar_menu[0].count">
+								<div class="proj-image-container">
+									<img class="proj-image" src="../assets/logo.png" alt="">
+								</div>
+								<div class="proj-information">
+									<div class="proj-name">
+										<a class="proj-name-item" href="/">TeeMate</a>
+										<div class="proj-private" :class="[private ? 'fas fa-lock' : 'fas fa-lock-open']"></div>
+									</div>
+									<p class="proj-description">some description about your project</p>
+								</div>
+							</li>
+						</ol>
 					</div>
 				</section>
 			</div>
