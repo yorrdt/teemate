@@ -1,19 +1,6 @@
-# TeeMate Nuxt.js
+# TeeMate
 
-## Project setup
-```
-$ cd <project-name>
-$ npm install
-$ npm run dev
-```
-
-The application is now running on http://localhost:3000
-
-## TeeMate(using VueJS) Illustrations
-
-![Illustration](https://github.com/yorrdt/teemate/blob/master/teemate-vuejs-scr.png)
-
-## TeeMate(Native Version) Illustrations
+## TeeMate Illustrations
 
 ![Illustration](https://github.com/yorrdt/teemate/blob/master/teemate-scr(4).png)
 ![Illustration](https://github.com/yorrdt/teemate/blob/master/teemate-scr(3).png)
