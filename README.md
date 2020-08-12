@@ -1,4 +1,6 @@
-# TeeMate
+# teemate-native
+
+uses phpMyAdmin as data base
 
 ## TeeMate Illustrations
 
